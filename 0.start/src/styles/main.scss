@@ -1,0 +1,82 @@
+@import "header.scss";
+@import "banner.scss";
+@import "featured-collection.scss";
+@import "best-sellers.scss";
+@import "about-us.scss";
+@import "footer.scss";
+@import "item.scss";
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Trebuchet MS.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+a {
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+a:after {
+  background-color: #5f5f5d;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+a:hover:after,
+a:focus:after {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 5px auto;
+  position: relative;
+}
+
+
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

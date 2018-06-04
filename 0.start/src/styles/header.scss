@@ -1,0 +1,139 @@
+.header {
+  width: 100%;
+}
+
+.first-line {
+  width: 100%;
+  background: #f6f6f6;
+  .first-line-inner {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;
+  }
+  .rating {
+    width: 50%;
+    p {
+      display: inline;
+    }
+    img {
+      display: block;
+    }
+  }
+  .auth {
+    width: 50%;
+    text-align: right;
+    margin: auto;
+    a {
+      padding: 0 5px; 
+    }
+  }
+}
+
+.main-info {
+  width: 100%;
+  .main-info-inner {
+    width: 960px;
+    margin: 0 auto;
+    padding: 25px 10px;
+    display: flex;
+    .logo {
+      width: 25%;
+      min-width: 195px;
+      img {
+        width: 195px;
+      }
+    }
+    .call-us {
+      width: 50%;
+      display: flex;
+      .call-us-inner {
+        margin: auto 0px;
+        .call {
+          color: #333333;
+          font-size: 19px;
+          font-weight: bold;
+        }
+        .tel {
+          color: #dc5047;
+          font-size: 21px;
+        }
+        .time {
+          color: #333333;
+          font-size: 14px;
+        }
+      }
+    }
+    .info-bar {
+      width: 25%;
+      padding: 10px 0px;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      .cart {
+        width: 215px;
+        background-color: #333333;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        a {
+          font-size: 16px;
+          color: #f6f6f6;
+        }
+        span {
+          font-size: 18px;
+        }
+      }
+      .search {
+        width: 215px;
+        border: 1px solid #000;
+        height: 25px;
+        line-height: 25px;
+        padding: 0;
+        box-sizing: border-box;
+        .input-search {
+          width: 80%;
+          height: 97%;
+          font-size: 16px;
+          border: 0;
+          outline: none;
+          padding: 0 0 0 5px;
+          margin: 0;
+        }
+        .btn-search {
+          height: 90%;
+          width: 15%;
+          border: 0;
+          background-image: url(../img/search-icon.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .nav-bar {
+    width: 100%;
+    background-color: #333333;
+    margin: 10px 0;
+    .nav-bar-inner {
+      width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      ul {
+        display: flex;
+        li {
+          display: block;
+          list-style-type: none;
+          font-size: 21px;
+          font-weight: bold;
+          margin-right: 55px;
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

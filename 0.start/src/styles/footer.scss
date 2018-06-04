@@ -1,0 +1,126 @@
+.footer {
+  width: 100%;
+  .subscribe-bar {
+    width: 100%;
+    background-color: #333333;
+    .subscribe-bar-inner {
+      width: 960px;
+      margin: 30px auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      .sub-item-text {
+        width: 30%;
+        color: #ffffff;
+        font-size: 21px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+      .sub-item-input {
+        width: 30%;
+        height: 100%;
+        box-sizing: border-box;
+        font-size: 21px;
+        display: flex;
+        padding: 10px 0;
+        input {
+          display: block;
+          width: 75%;
+          height: 36px;
+          box-sizing: border-box;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+        }
+        button {
+          display: block;
+          width: 25%;
+          height: 36px;
+          border: 0;
+          background: #f19200;
+          box-sizing: border-box;
+          font-weight: bold;
+          color: #ffffff;
+        }
+      }
+      .sub-item-social {
+        width: 30%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        ul {
+          display: flex;
+          justify-content: center;
+          li {
+            display: block;
+            width: 25%;
+            list-style-type: none;
+            text-align: center;
+            a {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-inner {
+    width: 960px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    .site-map {
+      width: 25%;
+      .footer-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .footer-message {
+        margin-top: 15px;
+        text-align: justify;
+        font-size: 12px;
+      }
+    }
+    .information{
+      width: 20%;
+      padding: 0 0 0 30px;
+      p{
+        font-size: 21px;
+        padding: 0 0 20px 0;
+      }
+      ul{
+        li{
+          font-size: 14px;
+          list-style-type: none;
+        }
+      }
+    }
+    .service{
+      width: 20%;
+      padding: 0 0 0 30px;
+      p{
+        font-size: 21px;
+        padding: 0 0 20px 0;
+      }
+      ul{
+        li{
+          font-size: 14px;
+          list-style-type: none;
+        }
+      }
+    }
+    .company-info{
+      width: 20%;
+      padding: 0 0 0 30px;
+      p{
+        font-size: 21px;
+        padding: 0 0 20px 0;
+      }
+      .info-mail{
+        font-size: 14px;
+        padding: 0 0 20px 0;
+      }
+    }
+  }
+}

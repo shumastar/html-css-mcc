@@ -1,0 +1,51 @@
+.item {
+  width: 22%;
+  min-width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #bdbdbd;
+  padding: 5px;
+  background: #f7f7f7;
+  margin: 10px 0;
+  img {
+    display: block;
+    overflow: hidden;
+    width: 197px;
+    height: 158px;
+  }
+  .item-name {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  .price {
+    color: hsl(4, 68%, 57%);
+    font-size: 17px;
+    padding: 5px 0;
+    span {
+      font-size: 14px;
+      text-decoration-line: line-through;
+      color:#505050;;
+      padding: 5px;
+    }
+  }
+  .item-btns {
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      border: solid #bdbdbd 0.5px;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      opacity: 0.6;
+    }
+    .btn-add {
+      width: 50%;
+      padding: 5px;      
+    }
+    .btn-view {
+      width: 40%;
+      padding: 5px;
+    }
+  }
+}
