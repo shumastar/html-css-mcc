@@ -16,7 +16,7 @@
       }
     }
     .banner-button {
-      padding-left: 180px;
+      padding-left: 150px;
       padding-top: 20px;
       button {
         color: #ffffff;
@@ -32,6 +32,12 @@
         transform: scale(1.1);
         opacity: 0.8;
       }
+    }
+    .slider{
+      color: #ffffff;
+      width: 960px;
+      margin: 80px auto;
+      text-align: center;
     }
   }
 }

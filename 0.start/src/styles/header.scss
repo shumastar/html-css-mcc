@@ -83,6 +83,9 @@
           font-size: 16px;
           color: #f6f6f6;
         }
+        a:hover {
+          color: #f19200;
+        }
         span {
           font-size: 18px;
         }
@@ -101,7 +104,7 @@
           margin: 3px;
         }
         .btn-search {
-          height: 99%;
+          height: 95%;
           width: 10%;
           border: 0;
           background: #ffffff;
@@ -129,6 +132,9 @@
           margin-right: 55px;
           a {
             color: #ffffff;
+          }
+          a:hover {
+            color: #f19200;
           }
         }
       }
