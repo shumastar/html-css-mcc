@@ -57,10 +57,12 @@
         .tel {
           color: #dc5047;
           font-size: 21px;
+          padding-top: 5px; 
         }
         .time {
           color: #333333;
           font-size: 14px;
+          padding-top: 5px; 
         }
       }
     }
@@ -88,14 +90,12 @@
       .search {
         width: 215px;
         border: 1px solid #000;
-        height: 25px;
-        line-height: 25px;
         padding: 0;
         box-sizing: border-box;
+        background: #ffffff;
         .input-search {
           width: 80%;
-          height: 97%;
-          font-size: 16px;
+          font-size: 10px;
           border: 0;
           outline: none;
           padding: 0 0 0 5px;
@@ -105,10 +105,12 @@
           height: 90%;
           width: 15%;
           border: 0;
+          background: #ffffff;
           background-image: url(../img/search-icon.png);
           background-position: center;
           background-repeat: no-repeat;
           cursor: pointer;
+          outline: none;
         }
       }
     }
