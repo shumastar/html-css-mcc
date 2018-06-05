@@ -2,7 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const fs = require('fs')
+const fs = require('fs');
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -18,7 +18,7 @@ function generateHtmlPlugins(templateDir) {
   })
 }
 
-const htmlPlugins = generateHtmlPlugins('./src/html/views');
+const htmlPlugins = generateHtmlPlugins('./src/html');
 
 module.exports = {
   entry: [
@@ -63,7 +63,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        include: path.resolve(__dirname, 'src/html/includes'),
+        include: path.resolve(__dirname, 'src/html'),
         use: ['raw-loader']
       },
     ]
