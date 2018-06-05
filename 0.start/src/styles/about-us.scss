@@ -7,34 +7,33 @@
       margin: 20px 0;
       font-size: 24px;
     }
-    .about-items{
+    .about-items {
       display: flex;
       justify-content: space-between;
-      .about-item{
+      .about-item {
         width: 30%;
-        .about-logo-wrapper{
+        .about-logo-wrapper {
           display: flex;
-          .about-logo{
+          .about-logo {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: #333333 no-repeat;
-            //background-image: url(../img/twitter.png);
+            background: #333333 no-repeat; //background-image: url(../img/twitter.png);
             background-position: center;
             text-align: center;
             line-height: 48px;
-            i{
+            i {
               color: #ffffff;
             }
           }
-          .about-title{
+          .about-title {
             height: 48px;
             line-height: 48px;
             padding: 0 5px;
             font-size: 20px;
           }
         }
-        .about-text{
+        .about-text {
           padding: 20px 0;
           text-align: justify;
           font-size: 16px;
@@ -42,6 +41,4 @@
       }
     }
   }
-
 }
-
