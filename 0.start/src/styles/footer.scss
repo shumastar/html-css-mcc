@@ -33,6 +33,9 @@
           outline: none;
           padding-left: 15px;
         }
+        input:focus {
+          border: 1px solid #f19200;
+        }
         button {
           display: block;
           width: 25%;

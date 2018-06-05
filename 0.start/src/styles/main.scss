@@ -34,10 +34,14 @@ button {
 
 a,
 a:active,
-a:hover,
 a:visited {
   text-decoration: none;
   color: #3c3c3c;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f19200;
 }
 
 a {
