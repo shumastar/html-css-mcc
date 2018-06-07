@@ -1,16 +1,19 @@
 .best-sellers {
   width: 100%;
-  .best-sellers-inner {
-    width: 960px;
-    margin: 30px auto;
-    .block-title {
-      margin: 20px 0;
-      font-size: 24px;
-    }
-    .best-sellers-items {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  }
+}
+
+.best-sellers-inner {
+  width: 960px;
+  margin: 30px auto;
+}
+
+.block-title {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.best-sellers-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

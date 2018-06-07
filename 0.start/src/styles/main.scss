@@ -5,17 +5,19 @@
 @import "about-us.scss";
 @import "footer.scss";
 @import "item.scss";
-@import "scss/fontawesome.scss";
-@import "scss/fa-solid.scss";
-@import "scss/fa-brands.scss";
-@import "scss/fa-regular.scss";
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/fa-solid.scss";
+@import "fontawesome/fa-brands.scss";
+@import "fontawesome/fa-regular.scss";
 @font-face {
   font-family: 'Trebuchet MS';
   font-style: normal;
   font-weight: 400;
+  line-height: 40px;
   src: url('../fonts/Trebuchet MS.ttf');
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 * {
   margin: 0;
   padding: 0;
@@ -44,15 +46,16 @@ a:hover {
   color: #f19200;
 }
 
-a {
+.link-text {
   display: inline-block;
   line-height: 1;
   cursor: pointer;
   position: relative;
+  transition: 2s ease;
 }
 
-a:after {
-  background-color: #5f5f5d;
+.link-text:after {
+  background-color: #f19200;
   display: block;
   content: "";
   height: 2px;
@@ -74,14 +77,6 @@ a:focus:after {
 
 .container {
   width: 100%;
-  margin: 5px auto;
+  margin: 0 auto;
   position: relative;
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
 }

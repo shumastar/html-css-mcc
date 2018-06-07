@@ -1,47 +1,56 @@
 .about-us {
   width: 100%;
-  .about-us-inner {
-    width: 960px;
-    margin: 40px auto;
-    .block-title {
-      margin: 20px 0;
-      font-size: 24px;
-    }
-    .about-items {
-      display: flex;
-      justify-content: space-between;
-      .about-item {
-        width: 30%;
-        .about-logo-wrapper {
-          display: flex;
-          .about-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #333333 no-repeat; //background-image: url(../img/twitter.png);
-            background-position: center;
-            text-align: center;
-            line-height: 48px;
-            i {
-              color: #ffffff;
-            }
-            i:hover {
-              color: #f19200;
-            }
-          }
-          .about-title {
-            height: 48px;
-            line-height: 48px;
-            padding: 0 5px;
-            font-size: 20px;
-          }
-        }
-        .about-text {
-          padding: 20px 0;
-          text-align: justify;
-          font-size: 16px;
-        }
-      }
-    }
+}
+
+.about-us-inner {
+  width: 960px;
+  margin: 40px auto;
+}
+
+.block-title {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.about-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-item {
+  width: 30%;
+}
+
+.about-logo-wrapper {
+  display: flex;
+}
+
+.about-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #333333 no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 48px;
+  i {
+    color: #ffffff;
+    transition: 2s ease;
   }
+  i:hover {
+    color: #f19200;
+  }
+}
+
+.about-title {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 5px;
+  font-size: 20px;
+}
+
+.about-text {
+  padding: 20px 0;
+  text-align: justify;
+  font-size: 16px;
 }

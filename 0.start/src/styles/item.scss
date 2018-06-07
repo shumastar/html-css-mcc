@@ -1,51 +1,63 @@
 .item {
-  width: 22%;
+  width: 23%;
   min-width: 200px;
   box-sizing: border-box;
   border: 1px solid #bdbdbd;
-  padding: 5px;
-  background: #f7f7f7;
+  padding: 10px;
+  background: #ffffff;
   margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   img {
     display: block;
     overflow: hidden;
     width: 197px;
-    height: 158px;
+    height: 148px;
   }
-  .item-name {
-    font-size: 16px;
-    padding: 5px 0;
+}
+
+.item-name {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+.price {
+  color: hsl(4, 68%, 57%);
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 0;
+  span {
+    font-size: 14px;
+    text-decoration-line: line-through;
+    color: #505050;
+    padding: 5px;
   }
-  .price {
-    color: hsl(4, 68%, 57%);
-    font-size: 17px;
-    padding: 5px 0;
-    span {
-      font-size: 14px;
-      text-decoration-line: line-through;
-      color: #505050;
-      padding: 5px;
-    }
-  }
-  .item-btns {
-    display: flex;
-    justify-content: space-between;
-    .btn {
-      border: solid #bdbdbd 0.5px;
-      padding: 5px;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      transform: scale(1.1);
-      opacity: 0.6;
-    }
-    .btn-add {
-      width: 50%;
-      padding: 5px;
-    }
-    .btn-view {
-      width: 40%;
-      padding: 5px;
-    }
-  }
+}
+
+.item-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border: solid #bdbdbd 0.5px;
+  margin-top: 10px;
+  font-size: 18px;
+  background: #ffffff;
+  transition: 2s ease;
+}
+
+.btn:hover {
+  background: #f19200;
+}
+
+.btn-add {
+  width: 50%;
+  padding: 5px;
+}
+
+.btn-view {
+  width: 40%;
+  padding: 5px;
 }

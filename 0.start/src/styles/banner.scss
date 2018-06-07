@@ -1,43 +1,49 @@
 .banner {
   width: 100%;
-  .banner-inner {
-    width: 960px;
-    height: 336px;
-    margin: 40px auto;
-    background-image: url(../img/banner-picture.png);
-    background-size: 100%;
-    .banner-text {
-      color: #ffffff;
-      font-family: "Open Sans";
-      font-size: 38px;
-      padding: 70px 0 0 90px;
-      span {
-        font-weight: bold;
-      }
-    }
-    .banner-button {
-      padding-left: 150px;
-      padding-top: 20px;
-      button {
-        color: #ffffff;
-        font-size: 24px;
-        line-height: 40px;
-        border: 1px solid #ffffff;
-        padding: 0 35px;
-        outline: none;
-        border: 1px solid #ffffff;
-        background-color: transparent;
-      }
-      button:hover {
-        transform: scale(1.1);
-        opacity: 0.8;
-      }
-    }
-    .slider{
-      color: #ffffff;
-      width: 960px;
-      margin: 80px auto;
-      text-align: center;
-    }
+}
+
+.banner-inner {
+  width: 960px;
+  height: 336px;
+  margin: 40px auto;
+  background-image: url(../img/banner-picture.png);
+  background-size: 100%;
+}
+
+.banner-info {
+  padding: 90px 70px 0px 70px;
+}
+
+.banner-text {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 38px;
+  span {
+    font-weight: bold;
   }
+}
+
+.banner-button {
+  width: 390px;
+  text-align: center;
+  margin-top: 20px;
+  button {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 40px;
+    border: 1px solid #ffffff;
+    padding: 0 50px;
+    background-color: transparent;
+    transition: 2s ease;
+  }
+  button:hover {
+    background: #f19200;
+  }
+}
+
+.slider {
+  color: #ffffff;
+  width: 960px;
+  margin: 40px auto;
+  text-align: center;
 }
