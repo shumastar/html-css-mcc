@@ -12,6 +12,9 @@
   margin: 0 auto;
   display: flex;
   padding: 10px;
+  @media (max-width: 767.98px) {
+    width: 100%;
+  }
 }
 
 .rating {
@@ -23,6 +26,10 @@
     display: inline-block;
     margin-top: 5px;
   }
+  @media (max-width: 767.98px) {
+    width: 63%;
+    font-size: 10px;
+  }
 }
 
 .auth {
@@ -31,6 +38,10 @@
   margin: auto;
   a {
     padding: 0 5px;
+  }
+  @media (max-width: 767.98px) {
+    width: 25%;
+    font-size: 9px;
   }
 }
 
@@ -43,6 +54,13 @@
   margin: 0 auto;
   padding: 25px 10px;
   display: flex;
+  @media (max-width: 767.98px) {
+    width: 100%;
+    padding: 15px 10px;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    padding: 15px 0;
+  }
 }
 
 .logo {
@@ -50,11 +68,20 @@
   img {
     width: 195px;
   }
+  @media (max-width: 767.98px) {
+    width: 38%;
+    img {
+      width: 120px;
+    }
+  }
 }
 
 .call-us {
   width: 50%;
   display: flex;
+  @media (max-width: 575.98px) {
+    display: none;
+  }
 }
 
 .call-us-inner {
@@ -65,18 +92,30 @@
   color: #333333;
   font-size: 19px;
   font-weight: bold;
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 16px;
+    padding-top: 0;
+  }
 }
 
 .tel {
   color: #dc5047;
   font-size: 21px;
   padding-top: 5px;
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 11px;
+    padding-top: 0;
+  }
 }
 
 .time {
   color: #333333;
   font-size: 14px;
   padding-top: 5px;
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 11px;
+    padding-top: 0;
+  }
 }
 
 .info-bar {
@@ -85,6 +124,10 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  @media (max-width: 767.98px) {
+    width: 57%;
+    padding: 0;
+  }
 }
 
 .cart {
@@ -105,6 +148,13 @@
   span {
     font-size: 18px;
   }
+  @media (max-width: 767.98px) {
+    width: 170px;
+    margin-bottom: 2px;
+    span {
+      font-size: 15px;
+    }
+  }
 }
 
 .search {
@@ -112,6 +162,9 @@
   border: 1px solid #000;
   background: #ffffff;
   box-sizing: border-box;
+  @media (max-width: 767.98px) {
+    width: 170px;
+  }
 }
 
 .input-search {
@@ -122,6 +175,9 @@
   border: none;
   padding: 3px;
   transition: 2s ease;
+  @media (max-width: 767.98px) {
+    width: 140px;
+  }
 }
 
 .input-search:focus {
@@ -167,51 +223,7 @@
       }
     }
   }
-}
-
-@media (max-width: 575.98px) {
-  .first-line-inner {
-    width: 100%;
-  }
-  .rating {
-    width: 63%;
-    font-size: 10px;
-  }
-  .auth {
-    width: 25%;
-  }
-  .main-info-inner {
-    width: 100%;
-    display: flex;
-    padding: 15px 10px;
-  }
-  .logo {
-    width: 38%;
-    img {
-      width: 120px;
-    }
-  }
-  .call-us {
-    display: none;
-  }
-  .info-bar {
-    width: 57%;
-    padding: 0;
-  }
-  .cart {
-    width: 170px;
-    margin-bottom: 2px;
-    span {
-      font-size: 15px;
-    }
-  }
-  .search {
-    width: 170px;
-  }
-  .input-search {
-    width: 140px;
-  }
-  .nav-bar-inner {
+  @media (max-width: 767.98px) {
     width: 100%;
     padding: 10px;
     ul {

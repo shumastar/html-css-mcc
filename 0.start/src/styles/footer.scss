@@ -13,6 +13,14 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 575.98px) {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 100%;
+  }
 }
 
 .sub-item-text {
@@ -23,6 +31,9 @@
   box-sizing: border-box;
   padding: 20px 0;
   transition: 2s ease;
+  @media (max-width: 767.98px) {
+    display: none;
+  }
 }
 
 .sub-item-text:hover {
@@ -36,6 +47,14 @@
   font-size: 21px;
   display: flex;
   padding: 15px 0;
+  @media (max-width: 575.98px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 50%;
+    margin: 0 auto;
+  }
   input {
     display: block;
     width: 75%;
@@ -69,6 +88,14 @@
   width: 30%;
   box-sizing: border-box;
   padding: 20px 0;
+  @media (max-width: 575.98px) {
+    width: 100%;
+    padding: 0 0 10px 0;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 50%;
+    padding: 0 0 10px 0;
+  }
   ul {
     display: flex;
     justify-content: center;
@@ -85,6 +112,11 @@
         color: #f19200;
       }
     }
+    @media (max-width: 767.98px) {
+      li {
+        width: 20%;
+      }
+    }
   }
 }
 
@@ -93,6 +125,9 @@
   margin: 30px auto;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 767.98px) {
+    width: 100%;
+  }
 }
 
 .site-map {
@@ -103,6 +138,17 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  @media (max-width: 575.98px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.footer-checkrate {
+  @media (max-width: 767.98px) {
+    display: none;
+  }
 }
 
 .footer-message {
@@ -152,54 +198,21 @@
     font-size: 15px;
     padding: 0 0 20px 0;
   }
-}
-
-@media (max-width: 575.98px) {
-  .footer {
-    width: 100%;
-  }
-  .subscribe-bar-inner {
-    width: 100%;
-    display: block;
-    padding: 0;
-  }
-  .sub-item-text {
-    display: none;
-  }
-  .sub-item-input {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .sub-item-social {
-    width: 100%;
-  }
-  .sub-item-social {
-    ul {
-      li {
-        width: 20%;
-      }
-    }
-  }
-  .footer-inner {
-    width: 100%;
-  }
-  .footer-checkrate {
-    display: none;
-  }
-  .footer-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .company-info {
+  @media (max-width: 575.98px) {
     width: 30%;
   }
-  .information,
-  .service,
-  .company-info {
+}
+
+.information,
+.service,
+.company-info {
+  @media (max-width: 575.98px) {
     display: none;
   }
-  .site-map {
+}
+
+.site-map {
+  @media (max-width: 575.98px) {
     width: 100%;
   }
 }

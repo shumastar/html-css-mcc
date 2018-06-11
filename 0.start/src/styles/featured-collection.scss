@@ -5,26 +5,27 @@
 .featured-collection-inner {
   width: 960px;
   margin: 30px auto;
+  @media (max-width: 767.98px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .block-title {
   margin: 20px 0;
   font-size: 24px;
+  @media (max-width: 575.98px) {
+    margin: 10px 10px;
+    font-size: 14px;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin: 10px 10px;
+    font-size: 18px;
+  }
 }
 
 .featured-items {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-@media (max-width: 575.98px) {
-  .featured-collection-inner {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .block-title {
-    margin: 10px 10px;
-    font-size: 14px;
-  }
 }
