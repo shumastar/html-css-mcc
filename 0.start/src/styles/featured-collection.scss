@@ -17,3 +17,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+@media (max-width: 575.98px) {
+  .featured-collection-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .block-title {
+    margin: 10px 10px;
+    font-size: 14px;
+  }
+}

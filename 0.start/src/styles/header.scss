@@ -47,7 +47,6 @@
 
 .logo {
   width: 25%;
-  min-width: 195px;
   img {
     width: 195px;
   }
@@ -112,6 +111,7 @@
   width: 215px;
   border: 1px solid #000;
   background: #ffffff;
+  box-sizing: border-box;
 }
 
 .input-search {
@@ -164,6 +164,61 @@
       }
       a:hover {
         color: #f19200;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .first-line-inner {
+    width: 100%;
+  }
+  .rating {
+    width: 63%;
+    font-size: 10px;
+  }
+  .auth {
+    width: 25%;
+  }
+  .main-info-inner {
+    width: 100%;
+    display: flex;
+    padding: 15px 10px;
+  }
+  .logo {
+    width: 38%;
+    img {
+      width: 120px;
+    }
+  }
+  .call-us {
+    display: none;
+  }
+  .info-bar {
+    width: 57%;
+    padding: 0;
+  }
+  .cart {
+    width: 170px;
+    margin-bottom: 2px;
+    span {
+      font-size: 15px;
+    }
+  }
+  .search {
+    width: 170px;
+  }
+  .input-search {
+    width: 140px;
+  }
+  .nav-bar-inner {
+    width: 100%;
+    padding: 10px;
+    ul {
+      li {
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 20px;
       }
     }
   }

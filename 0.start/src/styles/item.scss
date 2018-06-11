@@ -1,6 +1,5 @@
 .item {
   width: 23%;
-  min-width: 200px;
   box-sizing: border-box;
   border: 1px solid #bdbdbd;
   padding: 10px;
@@ -60,4 +59,16 @@
 .btn-view {
   width: 40%;
   padding: 5px;
+}
+
+@media (max-width: 575.98px) {
+  .item {
+    width: 48%;
+    img {
+      width: 100%;
+    }
+  }
+  .btn {
+    font-size: 14px;
+  }
 }

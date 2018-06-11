@@ -153,3 +153,53 @@
     padding: 0 0 20px 0;
   }
 }
+
+@media (max-width: 575.98px) {
+  .footer {
+    width: 100%;
+  }
+  .subscribe-bar-inner {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  .sub-item-text {
+    display: none;
+  }
+  .sub-item-input {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .sub-item-social {
+    width: 100%;
+  }
+  .sub-item-social {
+    ul {
+      li {
+        width: 20%;
+      }
+    }
+  }
+  .footer-inner {
+    width: 100%;
+  }
+  .footer-checkrate {
+    display: none;
+  }
+  .footer-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .company-info {
+    width: 30%;
+  }
+  .information,
+  .service,
+  .company-info {
+    display: none;
+  }
+  .site-map {
+    width: 100%;
+  }
+}
