@@ -1,0 +1,32 @@
+.lookbook__description {
+  float: left;
+  text-align: right;
+  width: 45%;
+  color: #777777;
+  margin-top: 50px;
+}
+
+.lookbook__description_title {
+  font-size: 37px;
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lookbook__description_text {
+  font-size: 15px;
+  line-height: 22px;
+  font-family: "Roboto";
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.lookbook__description_btn {
+  display: block;
+  margin-top: 100px;
+  float: right;
+  font-size: 16px;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+}

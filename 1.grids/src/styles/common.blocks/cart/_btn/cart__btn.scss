@@ -1,3 +1,8 @@
 .cart__btn {
   float: left;
+  margin-left: 10px;
+}
+
+.icon-down-open:before {
+  content: '\e800';
 }

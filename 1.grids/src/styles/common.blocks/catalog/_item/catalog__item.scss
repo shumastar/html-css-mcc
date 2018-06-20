@@ -1,0 +1,74 @@
+.catalog__item {
+  float: left;
+  box-sizing: border-box;
+  margin: 25px 25px 0 0;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f8f8f8;
+  font-size: 21px;
+}
+
+.catalog__item_small {
+  width: 382px;
+  height: 500px;
+}
+
+.catalog__item_big {
+  width: 789px;
+  height: 700px;
+  margin-right: 0;
+}
+
+.catalog__item_right {
+  float: right;
+  margin-right: 0;
+}
+
+.catalog__item:nth-child(4) {
+  margin-right: 25px;
+}
+
+.catalog__item:nth-child(6) {
+  margin-right: 0;
+}
+
+.catalog__item:nth-child(10) {
+  margin-right: 0;
+}
+
+.catalog__item_1,
+.catalog__item_7,
+.catalog__item_9 {
+  background-image: url(../img/photo1.png);
+}
+
+.catalog__item_2,
+.catalog__item_8,
+.catalog__item_10,
+  {
+  background-image: url(../img/photo2.png);
+}
+
+.catalog__item_3 {
+  background-image: url(../img/photo3.png);
+}
+
+.catalog__item_4 {
+  background-image: url(../img/photo4.png);
+}
+
+.catalog__item_5 {
+  background-image: url(../img/photo5.png);
+}
+
+.catalog__item_6 {
+  background-image: url(../img/photo6.png);
+}
+
+.catalog__item_5:hover {
+  background-image: url(../img/photo5_back1.png), url(../img/photo5_back2.png), url(../img/photo5.png);
+  background-position: 100% 0%, 100% 30%, center;
+  transition: 1s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

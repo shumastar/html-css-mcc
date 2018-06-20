@@ -1,0 +1,22 @@
+.social-links-list__item {
+  color: #ffffff;
+  font-size: 250%;
+  display: inline;
+  padding: 0 20px;
+}
+
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+.icon-twitter:before {
+  content: '\f099';
+}
+
+.icon-instagram:before {
+  content: '\f16d';
+}
+
+.icon-pinterest:before {
+  content: '\f231';
+}

@@ -1,4 +1,11 @@
-.cart{
+.cart {
   float: right;
   overflow: hidden;
+  padding: 10px;
+}
+
+.cart:hover {
+  background-color: #00c8c8;
+  color: #ffffff;
+  transition: 1s;
 }

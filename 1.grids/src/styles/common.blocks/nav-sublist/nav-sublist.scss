@@ -1,0 +1,11 @@
+.nav-sublist {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav__item:hover>.nav-sublist {
+  display: block;
+}

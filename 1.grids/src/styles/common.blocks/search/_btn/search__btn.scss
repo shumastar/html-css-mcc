@@ -1,0 +1,15 @@
+.search__btn {
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: #777777 1px solid;
+  border-left: none;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.icon-search:before {
+  content: '\e804';
+  color: #777777;
+}

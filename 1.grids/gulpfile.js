@@ -13,23 +13,22 @@ const babel = require('gulp-babel');
 const rigger = require('gulp-rigger');
 
 gulp.task('html', () => {
-  return gulp.src('src/*.html')
-    .pipe(rigger())
-    .pipe(rename({
+	return gulp.src('src/*.html')
+		.pipe(rigger())
+		.pipe(rename({
 			suffix: '.build'
 		}))
-    .pipe(gulp.dest('src'))
-    .pipe(browserSync.reload({
+		.pipe(gulp.dest('src'))
+		.pipe(browserSync.reload({
 			stream: true
 		}))
 });
 
-gulp.task('html:build', () => {
-  return gulp.src('src/index.build.html')
-    .pipe(rename('index'))
-    .pipe(gulp.dest('dist'))
+gulp.task('html:build', ['html'], () => {
+	return gulp.src('src/index.build.html')
+		.pipe(rename('index.html'))
+		.pipe(gulp.dest('dist'))
 });
-
 
 gulp.task('sass', () => {
 	return gulp.src('src/**/*.scss')
@@ -44,8 +43,8 @@ gulp.task('sass', () => {
 gulp.task('browser-sync', () => {
 	browserSync({
 		server: {
-      baseDir: 'src',
-      index: "index.build.html"
+			baseDir: 'src',
+			index: "index.build.html"
 		},
 		notify: false
 	});
@@ -56,8 +55,8 @@ gulp.task('scripts', () => {
 		.pipe(babel({
 			presets: ['es2015']
 		}))
-    .pipe(uglify())
-    .pipe(rename({
+		.pipe(uglify())
+		.pipe(rename({
 			suffix: '.min'
 		}))
 		.pipe(gulp.dest('src/js-min'));
@@ -69,7 +68,7 @@ gulp.task('css:build', ['sass'], () => {
 		.pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('watch', ['clean-temp', 'html', 'browser-sync',  'sass'], () => {
+gulp.task('watch', ['clean-temp', 'html', 'browser-sync', 'sass'], () => {
 	gulp.watch('src/styles/**/*.scss', ['sass']);
 	gulp.watch('src/**/*.html', browserSync.reload);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
@@ -102,8 +101,8 @@ gulp.task('build', ['clean', 'clean-temp', 'html:build', 'css:build', 'scripts',
 		.pipe(gulp.dest('dist/fonts'));
 
 	const buildJs = gulp.src('src/js-min/*.js')
-    .pipe(gulp.dest('dist/js'));
-    
+		.pipe(gulp.dest('dist/js'));
+
 });
 
 gulp.task('clear', (callback) => {
