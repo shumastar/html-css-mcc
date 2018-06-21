@@ -1,4 +1,10 @@
 .auth__register {
   float: left;
   padding: 10px;
+  &_link {
+    color: #777777;
+  }
+  &_link:hover {
+    color: #00c8c8;
+  }
 }

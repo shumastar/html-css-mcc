@@ -1,0 +1,8 @@
+.casual-list__item {
+  &_link {
+    color: #333333;
+    &:hover {
+      color: #00c8c8;
+    }
+  }
+}

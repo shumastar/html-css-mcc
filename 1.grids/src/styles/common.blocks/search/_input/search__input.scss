@@ -1,8 +1,11 @@
 .search__input {
   font-size: 13px;
-  border: #777777 1px solid;
-  border-right: none;
+  border: 0;
   height: 100%;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0 5px;
+  &:focus {
+    outline: 0;
+  }
+  
 }

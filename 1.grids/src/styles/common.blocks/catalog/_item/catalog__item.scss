@@ -7,22 +7,26 @@
   background-position: center;
   background-color: #f8f8f8;
   font-size: 21px;
-}
-
-.catalog__item_small {
-  width: 382px;
-  height: 500px;
-}
-
-.catalog__item_big {
-  width: 789px;
-  height: 700px;
-  margin-right: 0;
-}
-
-.catalog__item_right {
-  float: right;
-  margin-right: 0;
+  &_small {
+    width: 382px;
+    height: 500px;
+  }
+  &_big {
+    width: 789px;
+    height: 700px;
+    margin-right: 0;
+  }
+  &_right {
+    float: right;
+    margin-right: 0;
+  }
+  &:hover {
+    transition: 1s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  &:not(:hover) {
+    transition: 1s;
+  }
 }
 
 .catalog__item:nth-child(4) {
@@ -69,6 +73,4 @@
 .catalog__item_5:hover {
   background-image: url(../img/photo5_back1.png), url(../img/photo5_back2.png), url(../img/photo5.png);
   background-position: 100% 0%, 100% 30%, center;
-  transition: 1s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

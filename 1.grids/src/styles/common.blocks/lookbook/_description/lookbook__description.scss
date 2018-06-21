@@ -2,6 +2,7 @@
   float: left;
   text-align: right;
   width: 45%;
+  height: 100%;
   color: #777777;
   margin-top: 50px;
 }
@@ -29,4 +30,12 @@
   letter-spacing: 3px;
   padding: 10px 20px;
   background-color: #f8f8f8;
+  outline: 0;
+  border: 1px solid #777777;
+  &:focus, 
+  &:active,
+  &:hover {
+    outline: 0;
+    border: 1px solid #00c8c8;
+  }
 }

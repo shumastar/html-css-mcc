@@ -34,32 +34,20 @@
 
 .link,
 .link:active,
-.link:visited {
-  text-decoration: none;
-  color: #777777;
-}
-
+.link:visited,
 .link:hover {
   text-decoration: none;
-  color: #00c8c8;
-}
-
-.link-icon,
-.link-icon:active,
-.link-icon:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.link-icon:hover {
-  text-decoration: none;
-  color: #777777;
 }
 
 .btn:hover {
   background-color: #00c8c8;
   color: #ffffff;
   box-sizing: border-box;
+  transition: 1s;
+}
+
+.btn:not(:hover) {
+  transition: 1.5s;
 }
 
 :active,

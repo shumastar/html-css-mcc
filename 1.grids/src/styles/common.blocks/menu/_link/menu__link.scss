@@ -1,6 +1,10 @@
 .menu__link {
-  padding: 10px 30px 10px 0;
+  margin: 10px 30px 10px 0;
   font-size: 13px;
   line-height: 20px;
   text-transform: uppercase;
+  color: #333333;
+  &:hover {
+    color: #00c8c8;
+  }
 }

@@ -1,8 +1,15 @@
 .social-links-list__item {
+  display: inline;
   color: #ffffff;
   font-size: 250%;
-  display: inline;
-  padding: 0 20px;
+  margin: 0 20px;
+  line-height: 200px;
+  &_link {
+    color:#ffffff;
+  }
+  &_link:hover {
+    color: #333333;
+  }
 }
 
 .icon-facebook:before {

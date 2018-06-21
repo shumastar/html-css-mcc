@@ -1,4 +1,12 @@
 .currency {
   float: left;
   padding: 10px;
+  &:hover {
+    background-color: #00c8c8;
+    color: #ffffff;
+    transition: 1s;
+  }
+  &:not(:hover) {
+    transition: 1.5s;
+  }
 }

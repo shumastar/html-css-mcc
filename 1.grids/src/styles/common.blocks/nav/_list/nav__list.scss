@@ -1,3 +1,9 @@
 .nav__list {
   padding: 14px;
+  &_link {
+    color: #333333;
+  }
+  &_link:hover {
+    color: #00c8c8;
+  }
 }

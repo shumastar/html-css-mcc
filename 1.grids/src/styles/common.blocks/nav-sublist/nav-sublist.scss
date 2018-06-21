@@ -4,6 +4,9 @@
   background-color: #ffffff;
   padding: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  text-transform: none;
+  cursor: default;
 }
 
 .nav__item:hover>.nav-sublist {
