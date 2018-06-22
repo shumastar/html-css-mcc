@@ -1,5 +1,7 @@
 .line {
-  width: 1603px;
+  width: 1770px;
   margin: 80px auto 0 auto;
-  color: #f8f8f8;
+  &_grey {
+    color: #333333;
+  }
 }

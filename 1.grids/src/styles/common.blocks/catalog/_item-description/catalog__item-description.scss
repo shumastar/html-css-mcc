@@ -1,0 +1,13 @@
+.catalog__item-description {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  margin-top: 450px;
+  width: 23.5%;
+}
+
+.catalog__item:hover> .catalog__item-description{
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.7s;
+}

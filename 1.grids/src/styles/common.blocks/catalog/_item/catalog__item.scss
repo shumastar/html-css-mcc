@@ -1,18 +1,17 @@
 .catalog__item {
   float: left;
   box-sizing: border-box;
-  margin: 25px 25px 0 0;
-  padding: 10px;
+  margin: 2% 2% 0 0;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f8f8f8;
   font-size: 21px;
   &_small {
-    width: 382px;
+    width: 23.5%;
     height: 500px;
   }
   &_big {
-    width: 789px;
+    width: 49%;
     height: 700px;
     margin-right: 0;
   }
@@ -21,16 +20,16 @@
     margin-right: 0;
   }
   &:hover {
-    transition: 1s;
+    transition: 0.7s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   &:not(:hover) {
-    transition: 1s;
+    transition: 0.7s;
   }
 }
 
 .catalog__item:nth-child(4) {
-  margin-right: 25px;
+  margin-right: 2%;
 }
 
 .catalog__item:nth-child(6) {

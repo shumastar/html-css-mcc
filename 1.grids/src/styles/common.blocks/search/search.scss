@@ -1,9 +1,10 @@
 .search {
   float: right;
   height: 30px;
-  margin: 8px;
+  margin: 10px;
   border: 1px solid #777777;
   &:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 }

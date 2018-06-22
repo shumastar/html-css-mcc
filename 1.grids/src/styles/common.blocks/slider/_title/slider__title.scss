@@ -3,8 +3,11 @@
   letter-spacing: 2px;
   line-height: 54px;
   color: #ffffff;
-  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   padding-top: 150px;
+  padding-bottom: 20px;
+  &_bold {
+    font-weight: bold;
+  }
 }

@@ -4,10 +4,9 @@
   height: 100%;
   background-color: #f8f8f8;
   box-sizing: border-box;
-  margin: 25px 32px 0 0;
-  padding: 3px;
+  margin-top: 25px;
 }
 
-.lookbook:nth-child(3) {
-  margin-right: 0;
+.lookbook + .lookbook {
+  margin-left: 2%;
 }

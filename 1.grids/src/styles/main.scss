@@ -1,3 +1,5 @@
+@import "variables/variables.scss";
+
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot');
@@ -43,11 +45,11 @@
   background-color: #00c8c8;
   color: #ffffff;
   box-sizing: border-box;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 .btn:not(:hover) {
-  transition: 1.5s;
+  transition: 0.2s;
 }
 
 :active,

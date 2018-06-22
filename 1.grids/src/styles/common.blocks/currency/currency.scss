@@ -4,9 +4,9 @@
   &:hover {
     background-color: #00c8c8;
     color: #ffffff;
-    transition: 1s;
+    transition: 0.3s;
   }
   &:not(:hover) {
-    transition: 1.5s;
+    transition: 0.3s;
   }
 }
