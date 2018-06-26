@@ -1,5 +1,9 @@
+@import "../../variables/variables.scss";
 .social-links-list {
-  list-style: none;
-  text-align: center;
-  line-height: 200px;
+    list-style: none;
+    text-align: center;
+    line-height: 200px;
+    @media(max-width: $xs) {
+        line-height: 100px;
+    }
 }

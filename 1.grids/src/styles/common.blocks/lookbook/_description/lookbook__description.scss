@@ -1,41 +1,42 @@
+@import "../../../variables/variables.scss";
 .lookbook__description {
-  float: left;
-  text-align: right;
-  width: 45%;
-  height: 100%;
-  color: #777777;
-  margin-top: 50px;
+    float: left;
+    text-align: right;
+    width: 45%;
+    height: 100%;
+    color: $light-gray;
+    margin-top: 10%;
 }
 
 .lookbook__description-title {
-  font-size: 37px;
-  line-height: 40px;
-  font-weight: bold;
-  text-transform: uppercase;
+    font-size: 2vw;
+    line-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .lookbook__description-text {
-  font-size: 15px;
-  line-height: 22px;
-  font-family: "Roboto";
-  margin-top: 25px;
-  overflow: hidden;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: "Roboto";
+    margin-top: 10%;
+    overflow: hidden;
 }
 
 .lookbook__description-button {
-  display: block;
-  margin-top: 100px;
-  float: right;
-  font-size: 16px;
-  letter-spacing: 3px;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
-  outline: 0;
-  border: 1px solid #777777;
-  &:focus, 
-  &:active,
-  &:hover {
+    display: block;
+    margin-top: 25%;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
     outline: 0;
-    border: 1px solid #00c8c8;
-  }
+    border: 1px solid $light-gray;
+    &:focus,
+    &:active,
+    &:hover {
+        outline: 0;
+        border: 1px solid $marine;
+    }
 }

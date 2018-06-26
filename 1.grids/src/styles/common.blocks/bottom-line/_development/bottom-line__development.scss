@@ -1,4 +1,8 @@
+@import "../../../variables/variables.scss";
 .bottom-line__development {
-  float: right;
-  padding: 10px;
+    float: right;
+    padding: 10px;
+    @media(max-width: $xs) {
+        display: none;
+    }
 }

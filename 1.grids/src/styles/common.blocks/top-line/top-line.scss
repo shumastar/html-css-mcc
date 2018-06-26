@@ -1,7 +1,20 @@
+@import "../../variables/variables.scss";
 .top-line {
-  width: 1170px;
+  width: $inner-width;
+  @media(max-width: $xs) {
+    width: $mobile;
+  }
+  @media (min-width: $xs) and (max-width: $sm) {
+    width: $sm;
+  }
+  @media (min-width: $sm) and (max-width: $md) {
+    width: $md;
+  }
+  @media (min-width: $md) and (max-width: $lg) {
+    width: $lg;
+  }
   margin: 0 auto;
   overflow: hidden;
-  color: #777777;
+  color: $light-gray;
   font-size: 13px;
 }

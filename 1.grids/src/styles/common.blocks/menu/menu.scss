@@ -1,5 +1,28 @@
+@import "../../variables/variables.scss";
+
 .menu {
-  width: 1770px;
-  margin: 0 auto;
+    width: $content-width;
+    @media(max-width: $xs) {
+    width: $mobile;
+}
+
+@media (min-width: $xs) and (max-width: $sm) {
+    width: $sm;
+}
+
+@media (min-width: $sm) and (max-width: $md) {
+    width: $md;
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+    width: $lg;
+}
+
+margin: 0 auto;
   padding: 15px;
+  @media(max-width: $xs) {
+    padding: 15px 2px;
+}
+
+box-sizing: border-box;
 }

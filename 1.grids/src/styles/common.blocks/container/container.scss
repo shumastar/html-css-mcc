@@ -1,5 +1,22 @@
+@import "../../variables/variables.scss";
 .container {
-  min-width: 1630px;
-  margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
+    min-width: 1630px;
+    @media(max-width: $xs) {
+        min-width: $mobile;
+    }
+    @media (min-width: $xs) and (max-width: $sm) {
+        min-width: $sm;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+        min-width: $md;
+    }
+    @media (min-width: $md) and (max-width: $lg) {
+        min-width: $lg;
+    }
+    @media (min-width: $lg) and (max-width: $xl) {
+        min-width: $xl;
+    }
+    margin: 0 auto;
+    font-family: 'Montserrat',
+    sans-serif;
 }

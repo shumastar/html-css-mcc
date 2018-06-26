@@ -1,10 +1,14 @@
+@import "../../../variables/variables.scss";
 .auth__register {
   float: left;
   padding: 10px;
+  @media(max-width: $xs) {
+    display: none;
+  }
   &_link {
-    color: #777777;
+    color: $light-gray;
   }
   &_link:hover {
-    color: #00c8c8;
+    color: $marine;
   }
 }

@@ -1,14 +1,23 @@
+@import "../../variables/variables.scss";
 .nav-sublist {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  padding: 25px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  text-transform: none;
-  cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0.2s;
+    position: absolute;
+    background-color: $white;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    text-transform: none;
+    cursor: default;
 }
 
-.nav__item:hover>.nav-sublist {
-  display: block;
+.nav__list-link:hover+.nav-sublist {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-sublist:hover {
+    opacity: 1;
+    visibility: visible;
 }

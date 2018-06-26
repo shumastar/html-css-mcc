@@ -1,5 +1,9 @@
+@import "../../variables/variables.scss";
 .auth {
   float: right;
+  @media(max-width: $xs) {
+    float: none;
+  }
   overflow: hidden;
   margin-right: 25px;
 }

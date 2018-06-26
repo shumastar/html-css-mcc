@@ -1,5 +1,9 @@
+@import "../../variables/variables.scss";
 .nav {
-  float: left;
-  font-size: 13px;
-  line-height: 20px;
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
+    @media(max-width: $sm) {
+        display: none;
+    }
 }
