@@ -1,13 +1,35 @@
+@import "../../variables/variables.scss";
+
 .footer-wrapper {
-  width: 100%;
-  background-color: #f8f8f8;
-  margin-top: 25px;
-  padding-top: 40px;
+    width: 100%;
+    background-color: $white;
+    margin-top: 25px;
+    padding-top: 40px;
+    @media(max-width: $xs) {
+    margin-top: 0;
+    padding-top: 0;
+}
 }
 
 .footer {
-  width: 1200px;
-  margin: 0 auto;
+    width: $inner-width;
+    @media(max-width: $xs) {
+    width: $mobile;
+}
+
+@media (min-width: $xs) and (max-width: $sm) {
+    width: $sm;
+}
+
+@media (min-width: $sm) and (max-width: $md) {
+    width: $md;
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+    width: $lg;
+}
+
+margin: 0 auto;
   overflow: hidden;
-  background-color: #f8f8f8;
+  background-color: $white;
 }

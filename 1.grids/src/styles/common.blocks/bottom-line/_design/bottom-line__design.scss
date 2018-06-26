@@ -1,4 +1,7 @@
+@import "../../../variables/variables.scss";
 .bottom-line__design {
-  float: right;
-  padding: 10px; 
+    padding: 10px;
+    @media(max-width: $xs) {
+        display: none;
+    }
 }

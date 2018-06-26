@@ -1,5 +1,6 @@
 .cart {
-  float: right;
-  overflow: hidden;
-  padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 10px;
 }

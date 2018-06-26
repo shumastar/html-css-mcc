@@ -1,5 +1,10 @@
+@import "../../variables/variables.scss";
 .auth {
-  float: right;
+  display: flex;
+  justify-content: space-around;
   overflow: hidden;
-  margin-right: 25px;
+  margin-left: 60%;
+  @media(max-width: $md) {
+    margin-left: 0;
+  }
 }

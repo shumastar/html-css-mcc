@@ -1,13 +1,28 @@
+@import "../../../variables/variables.scss";
+
 .catalog__item-description {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  margin-top: 450px;
-  width: 23.5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0.2s;
+    position: absolute;
+    background-color: $white;
+    margin-top: 450px;
+    @media (min-width: $xs) and (max-width: $sm) {
+    margin-top: 355px;
 }
 
-.catalog__item:hover> .catalog__item-description{
-  display: block;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: 0.7s;
+width: 24.5%;
+  @media (min-width: $xs) and (max-width: $sm) {
+    width: 48%;
+}
+}
+
+.catalog__item:hover>.catalog__item-description {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+    @media(max-width: $xs) {
+    display: none;
+}
 }

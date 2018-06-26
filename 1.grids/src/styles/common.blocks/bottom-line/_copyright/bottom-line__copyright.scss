@@ -1,4 +1,8 @@
+@import "../../../variables/variables.scss";
 .bottom-line__copyright {
-  float: left;
-  padding: 10px;
+    padding: 10px;
+    margin-right: 45%;
+    @media(max-width: $xs) {
+        margin-right: 0;
+    }
 }

@@ -1,7 +1,14 @@
+@import "../../../variables/variables.scss";
 .slider__slogan {
   font-size: 30px;
+  @media(max-width: $xs) {
+    font-size: 14px;
+  }
   letter-spacing: 2px;
   line-height: 54px;
+  @media(max-width: $xs) {
+    line-height: 0;
+  }
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;

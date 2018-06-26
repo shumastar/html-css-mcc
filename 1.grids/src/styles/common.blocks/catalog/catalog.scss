@@ -1,5 +1,20 @@
-.catalog {
-  margin: 0 auto;
-  max-width: 1770px;
-  position: relative;
-}
+// @import "../../variables/variables.scss";
+// .catalog {
+//     display: flex;
+//     flex-flow: column wrap;
+//     width: $content-width;
+//     @media(max-width: $xs) {
+//         width: $mobile;
+//     }
+//     @media(min-width: $xs) and (max-width: $sm) {
+//         width: $sm;
+//     }
+//     @media(min-width: $sm) and (max-width: $md) {
+//         width: $md;
+//     }
+//     @media(min-width: $md) and (max-width: $xl) {
+//         width: $lg;
+//     } 
+//     margin: 0 auto;
+//     position: relative;
+// }

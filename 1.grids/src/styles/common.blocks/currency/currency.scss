@@ -1,12 +1,14 @@
+@import "../../variables/variables.scss";
 .currency {
-  float: left;
-  padding: 10px;
-  &:hover {
-    background-color: #00c8c8;
-    color: #ffffff;
-    transition: 0.3s;
-  }
-  &:not(:hover) {
-    transition: 0.3s;
-  }
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    &:hover {
+        background-color: $marine;
+        color: $white;
+        transition: 0.3s;
+    }
+    &:not(:hover) {
+        transition: 0.3s;
+    }
 }

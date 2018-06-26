@@ -1,9 +1,14 @@
+@import "../../variables/variables.scss";
 .banner-award {
-  float: left;
-  width: 580px;
-  height: 200px;
-  background-color: #333333;
-  &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
+    width: 48%;
+    height: 200px;
+    @media(max-width: $xs) {
+        width: 95%;
+        margin: 0 auto;
+        height: 100px;
+    }
+    background-color: $gray;
+    &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 }

@@ -1,7 +1,23 @@
+@import "../../variables/variables.scss";
 .line {
-  width: 1770px;
-  margin: 80px auto 0 auto;
-  &_grey {
-    color: #333333;
-  }
+    width: $content-width;
+    @media(max-width: $xs) {
+        width: $mobile;
+    }
+    @media (min-width: $xs) and (max-width: $sm) {
+        width: $sm;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+        width: $md;
+    }
+    @media (min-width: $md) and (max-width: $xl) {
+        width: $lg;
+    }
+    margin: 80px auto 0 auto;
+    @media(max-width: $xs) {
+        margin-top: 30px;
+    }
+    &_grey {
+        color: $gray;
+    }
 }

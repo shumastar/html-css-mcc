@@ -1,4 +1,21 @@
+@import "../../variables/variables.scss";
 .lookbook-list {
-  width: 100%;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media(max-width: $xs) {
+        width: $mobile;
+        display: none;
+    }
+    @media (min-width: $xs) and (max-width: $sm) {
+        width: $sm;
+        display: none;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+        width: $md;
+    }
+    @media (min-width: $md) and (max-width: $lg) {
+        width: $lg;
+    }
+    margin: 0 auto;
 }
