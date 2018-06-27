@@ -1,14 +1,14 @@
 @import "../../../variables/variables.scss";
 .catalog__item {
   box-sizing: border-box;
-  margin: 2% 5px 0 0;
+  margin: 1% 1% 0 0;
   flex: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f8f8f8;
   background-size: cover;
   &_small {
-    width: 24.5%;
+    width: 23.2%;
     @media(max-width: $sm) {
       width: 48%;
     }
@@ -21,7 +21,7 @@
     }
   }
   &_big {
-    width: 49.2%;
+    width: 48%;
     @media(max-width: $sm) {
       width: 48%;
     }
@@ -60,6 +60,10 @@
 
 .catalog__item_4 {
   background-image: url(../img/photo4.png);
+  margin-top: -180px;
+  @media(max-width: $sm) {
+    margin-top: 1%;
+  }
 }
 
 .catalog__item_5 {
