@@ -1,9 +1,13 @@
+@import "../../../variables/variables.scss";
 .lookbook__image {
     width: 50%;
     height: 530px;
     background-image: url(../img/silhouette.png);
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-color: #f8f8f8;
+    background-color: $background-color;
     background-size: contain;
+    @media (min-width: $sm) and (max-width: $lg) {
+        display: none;
+    }
 }

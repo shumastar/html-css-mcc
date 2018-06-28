@@ -2,9 +2,12 @@
 .lookbook__description {
     text-align: right;
     width: 45%;
-    height: 100%;
-    color: $light-gray;
+    color: $secondary-color;
     margin-top: 10%;
+    @media (min-width: $sm) and (max-width: $lg) {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .lookbook__description-title {
@@ -19,23 +22,34 @@
     line-height: 22px;
     font-family: "Roboto";
     margin-top: 10%;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .lookbook__description-button {
     display: block;
     margin-top: 25%;
     margin-left: 50%;
-    font-size: 0.8vw;
+    font-size: 14px;
     letter-spacing: 3px;
     padding: 10px 20px;
-    background-color: #f8f8f8;
+    background-color: $background-color;
     outline: 0;
-    border: 1px solid $light-gray;
+    border: 1px solid $secondary-color;
+    @media (min-width: $sm) and (max-width: $lg) {
+        margin: 20px auto;;
+    }
+    @media (min-width: $lg) and (max-width: $xl) {
+        margin-left: 48%;
+    }
     &:focus,
     &:active,
     &:hover {
         outline: 0;
-        border: 1px solid $marine;
+        border: 1px solid $brand-color;
     }
 }

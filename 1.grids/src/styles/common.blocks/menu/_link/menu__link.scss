@@ -1,17 +1,16 @@
 @import "../../../variables/variables.scss";
 .menu__link {
   margin: 10px 30px 10px 0;
-  @media(max-width: $xs) {
-    margin: 10px 7px 10px 0;
-  }
+  display: inline-block;
   font-size: 13px;
-  @media(max-width: $xs) {
-    font-size: 7px;
-  }
   line-height: 20px;
   text-transform: uppercase;
-  color: $gray;
+  color: $primary-color;
+  @media(max-width: $sm) {
+    font-size: 11px;
+    margin: 10px 0;
+  }
   &:hover {
-    color: $marine;
+    color: $brand-color;
   }
 }

@@ -1,0 +1,23 @@
+.catalog__item-extra-photo-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition: .7s;
+}
+
+.catalog__item-extra-photo {
+  width: 100px;
+  height: 150px;
+  margin: 10% -10%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  &-1 {
+    background-image: url(../img/photo5_back1.png);
+  }
+  &-2 {
+    background-image: url(../img/photo5_back2.png);
+  }
+}

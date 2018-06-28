@@ -14,8 +14,7 @@
   @media (min-width: $sm) and (max-width: $xl) {
     padding: 10px 0 10px 0;
   }
-}
-
-.logo__title_bold {
-  font-weight: bolder;
+  &_bold {
+    font-weight: bold;
+  }
 }

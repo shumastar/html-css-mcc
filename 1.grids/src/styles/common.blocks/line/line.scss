@@ -18,6 +18,9 @@
         margin-top: 30px;
     }
     &_grey {
-        color: $gray;
+        border: none;
+        color: $background-color;
+        background-color: $background-color;
+        height: 2px;
     }
 }

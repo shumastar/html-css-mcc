@@ -1,0 +1,10 @@
+@import "../../variables/variables.scss";
+.menu-select {
+  display: none;
+  margin: 15px;
+  font-size: 10px;
+  @media(max-width: $xs) {
+    display: inline-block;
+    width: 30%;
+}
+}

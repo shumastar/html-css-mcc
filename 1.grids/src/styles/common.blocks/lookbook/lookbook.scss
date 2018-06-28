@@ -1,10 +1,15 @@
+@import "../../variables/variables.scss";
 .lookbook {
     display: flex;
     width: 32%;
     height: 530px;
-    background-color: #f8f8f8;
+    background-color: $background-color;
     box-sizing: border-box;
     margin-top: 25px;
+    padding: 10px;
+    @media (min-width: $sm) and (max-width: $lg) {
+        height: 400px;
+    }
 }
 
 .lookbook + .lookbook {

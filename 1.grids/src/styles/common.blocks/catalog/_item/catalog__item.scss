@@ -1,41 +1,43 @@
 @import "../../../variables/variables.scss";
 .catalog__item {
+  display: flex;
+  justify-content: space-between;
   box-sizing: border-box;
-  margin: 1% 1% 0 0;
-  flex: auto;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f8f8f8;
+  background-color: $background-color;
   background-size: cover;
   &_small {
     width: 23.2%;
-    @media(max-width: $sm) {
-      width: 48%;
-    }
     height: 500px;
     @media(max-width: $sm) {
+      width: 40%;
       height: 250px;
     }
-    @media (min-width: $xs) and (max-width: $sm) {
-      height: 400px;
+    @media (min-width: $xs) and (max-width: $md) {
+      width: 40%;
+      height: 500px;
     }
   }
   &_big {
     width: 48.2%;
-    @media(max-width: $sm) {
-      width: 48%;
-    }
     height: 700px;
-    @media(max-width: $sm) {
+    @media(max-width: $md) {
+      width: 40%;
       height: 250px;
     }
-    @media (min-width: $xs) and (max-width: $sm) {
-      height: 400px;
+    @media (min-width: $xs) and (max-width: $md) {
+      width: 40%;
+      height: 500px;
     }
   }
   &:hover {
     transition: 0.7s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
   }
   &:not(:hover) {
     transition: 0.7s;
@@ -61,8 +63,8 @@
 .catalog__item_4 {
   background-image: url(../img/photo4.png);
   margin-top: -180px;
-  @media(max-width: $sm) {
-    margin-top: 1%;
+  @media(max-width: $md) {
+    margin-top: 10px;
   }
 }
 
@@ -74,8 +76,7 @@
   background-image: url(../img/photo6.png);
 }
 
-.catalog__item_5:hover {
-  background-image: url(../img/photo5_back1.png), url(../img/photo5_back2.png), url(../img/photo5.png);
-  background-position: 100% 0%, 100% 30%, center;
-  background-size: auto;
+.catalog__item:hover>.catalog__item-extra-photo-wrapper {
+  opacity: 1;
+  visibility: visible;
 }

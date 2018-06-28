@@ -1,7 +1,7 @@
 @import "../../../../variables/variables.scss";
 
 .link-item__about {
-    color: $gray;
+    color: $primary-color;
     font-size: 14px;
     line-height: 30px;
     @media (min-width: $xs) and (max-width: $lg) {

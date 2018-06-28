@@ -5,22 +5,26 @@
     transition: all 0.3s ease 0.2s;
     position: absolute;
     background-color: $white;
-    margin-top: 450px;
-    @media (min-width: $xs) and (max-width: $sm) {
-        margin-top: 355px;
+    margin-top: 500px;
+    width: 23.86%;
+    @media(min-width: $md) and (max-width: $lg) {
+        width: 23.25%;
     }
-    width: 23.98%;
-    @media (min-width: $xs) and (max-width: $sm) {
-        width: 49%;
+    &_large {
+        margin-top: 700px;
+        width: 48.9%;
+        @media(min-width: $md) and (max-width: $lg) {
+            width: 48.3%;
+        }
     }
 }
 
 .catalog__item:hover>.catalog__item-description {
     opacity: 1;
     visibility: visible;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
     transition: 0.7s;
-    @media(max-width: $xs) {
+    @media(max-width: $md) {
         display: none;
     }
 }
