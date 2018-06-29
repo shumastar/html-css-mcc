@@ -1,0 +1,24 @@
+@import "../../../variables/variables.scss";
+.menu-mobile__btn {
+  color: $background-color;
+  background-color: #ffffff;
+  padding: 2px 3px;
+  position: absolute;
+  top: 64px;
+  left: 10px;
+  cursor: pointer;
+  transition: .3s;
+  z-index: 3;
+  width: 20px;
+  &-logo {
+    display: block;
+    height: 2px;
+    background-color: $primary-color;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+    &-first {
+      margin-top: 0;
+    }
+  }
+}

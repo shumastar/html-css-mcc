@@ -8,7 +8,7 @@
     box-sizing: border-box;
     @media(max-width: $xs) {
         display: none;
-    } 
+    }
     @media(max-width: $lg) {
         width: 100%;
         justify-content: space-around;

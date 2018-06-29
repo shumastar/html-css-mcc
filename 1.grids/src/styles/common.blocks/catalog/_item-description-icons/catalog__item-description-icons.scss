@@ -1,17 +1,40 @@
+@import "../../../variables/variables.scss";
 .catalog__item-description-icons {
     text-align: center;
     margin: 20px;
-    color: #333333;
 }
 
 .icon-basket:before {
     content: '\e802';
+    font-size: 150%;
 }
 
 .icon-heart:before {
     content: '\e803';
+    font-size: 150%;
 }
 
 .icon-exchange:before {
     content: '\f0ec';
+    font-size: 150%;
+}
+
+.icons {
+    display: inline-block;
+}
+
+.icons-link {
+    display: inline-block;
+    color: #ffffff;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    line-height: 50px;
+}
+
+.icons-link:hover {
+    color: #ffffff;
+    background-color: $brand-color;
 }

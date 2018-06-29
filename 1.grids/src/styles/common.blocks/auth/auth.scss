@@ -4,8 +4,8 @@
   justify-content: flex-end;
   flex-grow: 1;
   overflow: hidden;
-  margin-right: 3%; 
+  margin-right: 3%;
   @media(max-width: $md) {
-    margin-left: 0;
+    margin-right: 0;
   }
 }

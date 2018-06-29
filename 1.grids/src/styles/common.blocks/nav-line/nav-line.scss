@@ -3,27 +3,25 @@
   display: flex;
   justify-content: space-between;
   width: $content-width;
-  @media(max-width: $xs) {
-    width: $mobile;
-    flex-wrap: wrap; 
-  }
-  @media (min-width: $xs) and (max-width: $sm) {
-    width: $sm;
-  }
-  @media (min-width: $sm) and (max-width: $md) {
-    width: $md;
-  }
-  @media (min-width: $md) and (max-width: $xl) {
-    width: $lg;
-  }
   margin: 0 auto;
   overflow: hidden;
   padding: 10px;
+  box-sizing: border-box;
+  @media(max-width: $xs) {
+    width: $mobile;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  @media (min-width: $xs) and (max-width: $sm) {
+    width: $sm;
+    flex-wrap: wrap;
+  }
   @media (min-width: $sm) and (max-width: $md) {
+    width: $md;
     padding: 10px 3px;
   }
-  @media (min-width: $md) and (max-width: $lg) {
+  @media (min-width: $md) and (max-width: $xl) {
+    width: $lg;
     padding: 15px;
   }
-  box-sizing: border-box;
 }

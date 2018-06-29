@@ -1,3 +1,4 @@
+@import "../../../variables/variables.scss";
 .search__btn {
     border: none;
     background-color: #ffffff;
@@ -6,9 +7,12 @@
     height: 100%;
     box-sizing: border-box;
     padding: 0 5px;
+    @media(max-width: $sm) {
+        float: right; 
+    }
 }
 
 .icon-search:before {
     content: '\e804';
-    color: #777777;
+    color: $secondary-color;
 }

@@ -36,11 +36,11 @@
     }
   }
   &:hover {
-    transition: 0.7s;
-    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    box-shadow: 0 -3px 5px rgba(50, 50, 50, 0.5);
   }
   &:not(:hover) {
-    transition: 0.7s;
+    transition: 0.3s;
   }
 }
 
@@ -62,7 +62,7 @@
 
 .catalog__item_4 {
   background-image: url(../img/photo4.png);
-  margin-top: -180px;
+  margin-top: -190px;
   @media(max-width: $md) {
     margin-top: 10px;
   }

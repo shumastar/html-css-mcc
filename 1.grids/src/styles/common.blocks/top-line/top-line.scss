@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
   width: $inner-width;
+  margin: 0 auto;
+  overflow: hidden;
+  color: $secondary-color;
+  font-size: 13px;
   @media(max-width: $xs) {
     width: $mobile;
   }
@@ -15,8 +19,4 @@
   @media (min-width: $md) and (max-width: $lg) {
     width: $lg;
   }
-  margin: 0 auto;
-  overflow: hidden;
-  color: $secondary-color;
-  font-size: 13px;
 }

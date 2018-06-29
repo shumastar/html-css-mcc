@@ -1,14 +1,7 @@
 @import "../../variables/variables.scss";
-
 .menu-mobile {
     display: none;
-    background-image: url(../img/menu.png);
-    background-size: contain;
     @media(max-width: $sm) {
-    display: block;
-    float: right;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-}
+        display: block;
+    }
 }

@@ -5,16 +5,18 @@
     transition: all 0.3s ease 0.2s;
     position: absolute;
     background-color: $white;
-    margin-top: 500px;
+    margin-top: 503px;
     width: 23.86%;
+    box-sizing: border-box;
+    padding: 10px;
     @media(min-width: $md) and (max-width: $lg) {
-        width: 23.25%;
+        width: 23.35%;
     }
     &_large {
-        margin-top: 700px;
+        margin-top: 703px;
         width: 48.9%;
         @media(min-width: $md) and (max-width: $lg) {
-            width: 48.3%;
+            width: 48.35%;
         }
     }
 }
@@ -22,8 +24,8 @@
 .catalog__item:hover>.catalog__item-description {
     opacity: 1;
     visibility: visible;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-    transition: 0.7s;
+    box-shadow: 0 3px 5px rgba(50, 50, 50, 0.5);
+    transition: 0.3s;
     @media(max-width: $md) {
         display: none;
     }

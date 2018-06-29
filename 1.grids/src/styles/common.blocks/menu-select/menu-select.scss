@@ -3,6 +3,9 @@
   display: none;
   margin: 15px;
   font-size: 10px;
+  background-color: $background-color;
+  border: none;
+  box-sizing: border-box;
   @media(max-width: $xs) {
     display: inline-block;
     width: 30%;
