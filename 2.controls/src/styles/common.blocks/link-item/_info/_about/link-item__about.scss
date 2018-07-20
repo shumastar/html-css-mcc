@@ -1,0 +1,12 @@
+@import "../../../../variables/variables.scss";
+
+.link-item__about {
+    color: $primary-color;
+    font-size: 14px;
+    line-height: 30px;
+    @media (min-width: $xs) and (max-width: $lg) {
+    line-height: 22px;
+}
+
+font-weight: 300;
+}

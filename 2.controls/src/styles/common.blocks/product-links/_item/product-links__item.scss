@@ -1,0 +1,71 @@
+@import "../../../variables/variables.scss";
+.product-links__item {
+  padding: 0 4px;
+  font-size: 16px;
+  color: $secondary-color;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    @media(min-width: $xs) and (max-width: $md) {
+      padding: 10px 0;
+    }
+  }
+  &_link {
+    color: $secondary-color;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 6px;
+    @media(max-width: $xs) {
+      padding: 0 2px;
+      font-size: 14px;
+    }
+  }
+  &_link:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+  &_link:active,
+  &_link:visited {
+    text-decoration: none;
+  }
+  @media(max-width: $xs) {
+    padding: 10px 0;
+  }
+}
+
+.icon-star:before {
+  content: '\e805';
+  font-size: 100%;
+  color: #f1da0a;
+}
+
+.icon-star-empty:before {
+  content: '\e806';
+}
+
+.icon-facebook-small:before {
+  content: '\f09a';
+}
+
+.icon-twitter-small:before {
+  content: '\f099';
+}
+
+.icon-google-small:before {
+  content: '\f0d5';
+}
+
+.icon-pinterest-small:before {
+  content: '\f231';
+}
+
+.icon-instagram-small:before {
+  content: '\f16d';
+}
+
+.icon-mail-small:before {
+  content: '\e804';
+}

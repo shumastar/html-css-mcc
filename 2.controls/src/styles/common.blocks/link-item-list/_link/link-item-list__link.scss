@@ -1,0 +1,19 @@
+.link-item-list__link {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 300;
+    &_hover {
+        color: #333333;
+        cursor: pointer;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    &_hover:hover {
+        color: #00c8c8;
+        text-decoration: none;
+    }
+    &_hover:active,
+    &_hover:visited {
+        text-decoration: none;
+    }
+}

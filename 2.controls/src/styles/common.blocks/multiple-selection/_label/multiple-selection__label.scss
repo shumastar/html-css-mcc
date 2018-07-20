@@ -1,0 +1,19 @@
+@import "../../../variables/variables.scss";
+.multiple-selection__label {
+  display: block;
+  &_small {
+    width: 20px !important;
+  }
+}
+
+#spinner {
+  width: 20px;
+}
+
+#color-button,
+#size-button {
+  width: 130px;
+  @media(max-width: $xs) {
+    width: 122px;
+  }
+}

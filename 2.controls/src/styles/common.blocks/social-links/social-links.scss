@@ -1,0 +1,14 @@
+@import "../../variables/variables.scss";
+.social-links {
+    float: right;
+    width: 48%;
+    height: 200px;
+    @media(max-width: $xs) {
+        float: none;
+        width: 95%;
+        margin: 10px auto;
+        height: 100px;
+    }
+    background-color: $brand-color;
+    color: $white;
+}

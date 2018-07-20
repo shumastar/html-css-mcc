@@ -1,0 +1,9 @@
+@import "../../../variables/variables.scss";
+.product-description__buttons-list {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  @media(max-width: $xs) {
+    margin-top: 20px;
+  }
+}

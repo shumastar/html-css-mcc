@@ -1,0 +1,19 @@
+@import "../../../variables/variables.scss";
+.banner-award__content {
+    height: 100%;
+    text-align: center;
+    margin: 50px auto;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 36px;
+    letter-spacing: 2px;
+    line-height: 48px;
+    font-weight: bold;
+    @media(max-width: $xs) {
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    @media (min-width: $xs) and (max-width: $sm) {
+        font-size: 25px;
+    }
+}

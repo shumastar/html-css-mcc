@@ -1,0 +1,12 @@
+@import "../../../variables/variables.scss";
+.product-description__price {
+  color: $primary-color;
+  font-size: 30px;
+  letter-spacing: 2px;
+  &_crossed {
+    text-decoration: line-through;
+  }
+  @media(max-width: $xs) {
+    text-align: center;
+  }
+}

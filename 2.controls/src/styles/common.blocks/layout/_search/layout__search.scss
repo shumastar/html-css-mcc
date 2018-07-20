@@ -1,0 +1,6 @@
+@import "../../../variables/variables.scss";
+.layout__search {
+  @media(max-width: $xs) {
+    width: 100%;
+  }
+}

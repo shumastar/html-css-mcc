@@ -1,0 +1,7 @@
+@import "../../variables/variables.scss";
+.menu-mobile {
+    display: none;
+    @media(max-width: $sm) {
+        display: block;
+    }
+}

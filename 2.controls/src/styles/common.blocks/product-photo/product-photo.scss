@@ -1,0 +1,13 @@
+@import "../../variables/variables.scss";
+.product-photo {
+  width: 48%;
+  background-image: url(../img/product.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  @media(max-width: $xs) {
+    width: 100%;
+    height: 400px;
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../../variables/variables.scss";
+.button-add__icon {
+  padding: 0 10%;
+  @media(max-width: $xs) {
+    padding: 0 3px;
+  }
+  @media(min-width: $xs) and (max-width: $md) {
+    padding: 0;
+  }
+}
+
+.icon-heart:before {
+  content: '\e803';
+}

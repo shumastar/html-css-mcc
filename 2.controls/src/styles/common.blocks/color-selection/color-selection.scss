@@ -1,0 +1,10 @@
+@import "../../variables/variables.scss";
+.color-selection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  @media(max-width: $xs) {
+    width: 100%;
+    justify-content: space-around;
+  }
+}

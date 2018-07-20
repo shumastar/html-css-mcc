@@ -1,0 +1,21 @@
+@import "../../../variables/variables.scss";
+.auth__register {
+  padding: 10px;
+  @media(max-width: $xs) {
+    display: none;
+  }
+  &_link {
+    color: $secondary-color;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  &_link:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+  &_link:active,
+  &_link:visited {
+    text-decoration: none;
+  }
+}

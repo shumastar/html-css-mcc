@@ -1,0 +1,6 @@
+@import "../../../variables/variables.scss";
+.layout__nav-list {
+    @media(max-width: $sm) {
+        display: none;
+    }
+}

@@ -1,0 +1,8 @@
+@import "../../../../variables/variables.scss";
+
+.signin__link {
+  color: $secondary-color;
+}
+.signin_link:hover {
+  color: $brand-color;
+}

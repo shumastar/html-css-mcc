@@ -1,0 +1,17 @@
+.arrows__left {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  &:hover {
+    background-color: #00c8c8;
+    transition: .2s;
+    cursor: pointer;
+  }
+}
+
+.icon-left-open:before {
+  content: '\e807';
+  color: #777777;
+  font-size: 150%;
+}

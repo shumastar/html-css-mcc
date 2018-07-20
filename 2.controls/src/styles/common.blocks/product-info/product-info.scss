@@ -1,0 +1,10 @@
+@import "../../variables/variables.scss";
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 35px 0;
+  @media(max-width: $xs) {
+    flex-wrap: wrap;
+    padding-top: 20px
+  }
+}

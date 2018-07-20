@@ -1,0 +1,29 @@
+@import "../../variables/variables.scss";
+.button-add {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  border: 1px solid $primary-color;
+  padding: 10px 0 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    background-color: #2b2b2b;
+    color: $white;
+    transition: 0.2s;
+  }
+  &:not(:hover) {
+    transition: 0.2s;
+  }
+  @media(max-width: $xs) {
+    padding: 10px;
+    font-size: 13px;
+  }
+  @media(min-width: $xs) and (max-width: $md) {
+    padding: 20px 5px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    width: 60%;
+  }
+}

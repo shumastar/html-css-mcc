@@ -1,0 +1,22 @@
+@import "../../variables/variables.scss";
+.bottom-line {
+    display: flex;
+    justify-content: space-between;
+    width: $inner-width;
+    @media(max-width: $xs) {
+        width: $mobile;
+    }
+    @media (min-width: $xs) and (max-width: $sm) {
+        width: $sm;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+        width: $md;
+    }
+    @media (min-width: $md) and (max-width: $lg) {
+        width: $lg;
+    }
+    margin: 0 auto;
+    overflow: hidden;
+    color: $secondary-color;
+    font-size: 13px;
+}

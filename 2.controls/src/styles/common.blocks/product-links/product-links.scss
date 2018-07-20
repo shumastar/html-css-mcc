@@ -1,0 +1,9 @@
+@import "../../variables/variables.scss";
+.product-links {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @media(max-width: $xs) {
+    flex-wrap: wrap;
+  }
+}
