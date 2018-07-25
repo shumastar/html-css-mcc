@@ -2,16 +2,26 @@
 .product-description__compare {
   margin-top: 30px;
   display: flex;
-  justify-content: flex-start;
-  width: 45%;
-  padding: 0;
+  justify-content: space-around;
+  width: 39%;
   font-size: 18px;
   font-weight: bold;
   border: 0;
+  transition: .2s;
+  padding: 10px 0;
   &:hover {
     cursor: pointer;
+    background-color: $primary-color;
+    color: $white;
   }
-  @media(max-width: $md) {
-    width: 70%;
+  @media(max-width: $xs) {
+    width: 165px;
+    font-size: 12px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  @media (min-width: $xs) and (max-width: $md) {
+    width: 165px;
+    font-size: 12px;
   }
 }

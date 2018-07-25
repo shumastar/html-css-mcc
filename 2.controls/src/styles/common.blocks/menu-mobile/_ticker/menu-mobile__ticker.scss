@@ -1,7 +1,7 @@
 .menu-mobile__ticker {
   display: none;
   &:checked ~ .menu-mobile__btn {
-    left: 160px;
+    left: 90%;
     background-color: #333333;
   }
   &:checked ~ .menu-mobile__nav {

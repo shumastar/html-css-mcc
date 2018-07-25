@@ -3,9 +3,9 @@
   height: 40px;
   text-align: center;
   line-height: 40px;
+  transition: .3s;
   &:hover {
     background-color: #00c8c8;
-    transition: .2s;
     cursor: pointer;
   }
 }

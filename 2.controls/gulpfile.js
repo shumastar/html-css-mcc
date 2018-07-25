@@ -11,6 +11,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const rigger = require('gulp-rigger');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('html', () => {
 	return gulp.src('src/*.html')
@@ -50,18 +51,22 @@ gulp.task('browser-sync', () => {
 	});
 });
 
-gulp.task('jquery', () => {
+gulp.task('js', () => {
 	return gulp.src('src/**/*.js')
-	.pipe(uglify())
-		.pipe(rename({
-			suffix: '.min'
+		.pipe(babel({
+			presets: ['env']
 		}))
+		.pipe(uglify())
 		.pipe(gulp.dest('src/js-min'));
 });
 
 gulp.task('css:build', ['sass'], () => {
 	return gulp.src('src/css/*.css')
 		.pipe(cssnano())
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest('dist/css'));
 });
 
@@ -80,7 +85,7 @@ gulp.task('clean-temp', () => {
 });
 
 gulp.task('img:build', () => {
-	return gulp.src('src/img/**/*.+(png|jpg|gif|svg)')
+	return gulp.src('src/img/**/*.+(png|jpg|gif|svg|ico)')
 		.pipe(cache(imagemin({
 			interlaced: true,
 			progressive: true,
@@ -92,7 +97,7 @@ gulp.task('img:build', () => {
 		.pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('build', ['clean', 'clean-temp', 'html:build', 'css:build', 'jquery', 'img:build', 'sass'], () => {
+gulp.task('build', ['clean', 'clean-temp', 'html:build', 'css:build', 'js', 'img:build', 'sass'], () => {
 
 	const buildFonts = gulp.src('src/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));
@@ -100,6 +105,8 @@ gulp.task('build', ['clean', 'clean-temp', 'html:build', 'css:build', 'jquery', 
 	const buildJs = gulp.src('src/js-min/js/*.js')
 		.pipe(gulp.dest('dist/js'));
 
+	const buildLibs = gulp.src('src/libs/**/*')
+		.pipe(gulp.dest('dist/libs'));
 });
 
 gulp.task('clear', (callback) => {

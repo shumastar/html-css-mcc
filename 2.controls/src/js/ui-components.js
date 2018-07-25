@@ -3,19 +3,6 @@ $(function () {
 });
 
 $(function () {
-  $('.layout__general-info').tabs({
-    show: {
-      effect: "fade",
-      duration: 300
-    },
-    hide: {
-      effect: "fade",
-      duration: 300
-    },
-  });
-});
-
-$(function () {
   $("#slider-range").slider({
     range: true,
     min: 0,

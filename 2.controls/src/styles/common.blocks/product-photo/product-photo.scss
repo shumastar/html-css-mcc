@@ -1,13 +1,18 @@
 @import "../../variables/variables.scss";
 .product-photo {
   width: 48%;
-  background-image: url(../img/product.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  @media(max-width: $xs) {
+  @media(max-width: $mobile) {
     width: 100%;
     height: 400px;
   }
+  @media(min-width: $mobile) and (max-width: $xs) {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+
+.slide-1,
+.slide-2 {
+  background-image: url(../img/product.png);
 }

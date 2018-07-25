@@ -1,0 +1,18 @@
+.tab-list__item {
+  font-size: 16px;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #00c8c8;
+    color: #ffffff;
+  }
+  &.active {
+    background-color: #333333;
+    color: #ffffff;
+  }
+}

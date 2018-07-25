@@ -4,6 +4,9 @@
   display: flex;
   justify-content: space-between;
   @media(max-width: $xs) {
-    margin-top: 20px;
+    margin-top: 30px;
+  }
+  @media(min-width: $mobile) and (max-width: $md) {
+    justify-content: space-around;
   }
 }
