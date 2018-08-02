@@ -1,8 +1,6 @@
 $(function () {
   $(".input").checkboxradio();
-});
 
-$(function () {
   $("#slider-range").slider({
     range: true,
     min: 0,
@@ -14,9 +12,7 @@ $(function () {
   });
   $("#amount").val($("#slider-range").slider("values", 0) + "%" +
     "-" + $("#slider-range").slider("values", 1) + " %");
-});
 
-$(function () {
   $("#color").selectmenu();
   $("#qty")
     .selectmenu()
@@ -24,9 +20,7 @@ $(function () {
     .addClass("overflow");
 
   $("#size").selectmenu();
-});
 
-$(function () {
   $("#spinner").spinner({
     spin: function (event, ui) {
       if (ui.value > 10) {

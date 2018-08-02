@@ -2,7 +2,7 @@
   <div class="modal">
     <span class="modal__close">&times;</span>
     <div class="modal__title">Order</div>
-    <form action="" class="modal__form modal-form">
+    <form action="" class="modal__form modal-form" id="order-form">
       <div class="modal-form__date modal-form-date">
         <label for="" class="modal-form-date__label">Date</label>
         <input type="date" class="modal-form-date__input">
@@ -13,24 +13,24 @@
       </div>
       <div class="modal-form__phone modal-form-phone">
         <label for="" class="modal-form-phone__label">Phone</label>
-        <input type="tel" class="modal-form-phone__input">
+        <input type="tel" class="modal-form-phone__input" placeholder="+375-xx-xxxxxxx">
       </div>
       <div class="modal-form__name modal-form-name">
         <label for="" class="modal-form-name__label">Name</label>
-        <input type="text" class="modal-form-name__input">
+        <input type="text" class="modal-form-name__input" placeholder="Your Name">
       </div>
       <div class="modal-form__email modal-form-email">
         <label for="" class="modal-form-email__label">E-mail</label>
-        <input type="email" class="modal-form-email__input">
+        <input type="email" class="modal-form-email__input" placeholder="myemail@mail.com">
       </div>
       <div class="modal-form__message modal-form-message">
         <label for="" class="modal-form-message__label">Message</label>
-        <textarea name="" id="" rows="4" class="modal-form-message__input"></textarea>
+        <textarea name="" id="" rows="4" class="modal-form-message__input" placeholder="Write text"></textarea>
       </div>
     </form>
-    <button class="button-send">
+    <button class="button-send" type="submit" form="order-form">
       <i class="icon-paper-plane"></i>
-      Send
+      &nbsp;Send
     </button>
   </div>
 </div>

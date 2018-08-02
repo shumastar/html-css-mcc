@@ -12,6 +12,7 @@ const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const rigger = require('gulp-rigger');
 const autoprefixer = require('gulp-autoprefixer');
+const useref = require('gulp-useref');
 
 gulp.task('html', () => {
 	return gulp.src('src/*.html')
@@ -28,13 +29,28 @@ gulp.task('html', () => {
 gulp.task('html:build', ['html'], () => {
 	return gulp.src('src/index.build.html')
 		.pipe(rename('index.html'))
+		//.pipe(useref())
 		.pipe(gulp.dest('dist'))
 });
 
 gulp.task('sass', () => {
 	return gulp.src('src/**/*.scss')
-		.pipe(sass())
+		.pipe(sass({
+			includePaths: require('node-normalize-scss').includePaths
+		}))
 		.pipe(concat('styles.css'))
+		.pipe(gulp.dest('src/css'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
+});
+
+gulp.task('glide-css', () => {
+	return gulp.src([
+			'node_modules/@glidejs/glide/dist/css/glide.core.min.css',
+			'node_modules/@glidejs/glide/dist/css/glide.theme.min.css',
+		])
+		.pipe(concat('glide.css'))
 		.pipe(gulp.dest('src/css'))
 		.pipe(browserSync.reload({
 			stream: true
@@ -53,11 +69,18 @@ gulp.task('browser-sync', () => {
 
 gulp.task('js', () => {
 	return gulp.src('src/**/*.js')
-		.pipe(babel({
-			presets: ['env']
-		}))
+		// .pipe(babel({
+		// 	presets: ['env']
+		// }))
 		.pipe(uglify())
-		.pipe(gulp.dest('src/js-min'));
+		.pipe(concat('build.js'))
+		.pipe(gulp.dest('src/js'));
+});
+
+gulp.task('glide-js', () => {
+	return gulp.src('node_modules/@glidejs/glide/dist/glide.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('src/libs'));
 });
 
 gulp.task('css:build', ['sass'], () => {
@@ -70,7 +93,7 @@ gulp.task('css:build', ['sass'], () => {
 		.pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('watch', ['clean-temp', 'html', 'browser-sync', 'sass'], () => {
+gulp.task('watch', ['clean-temp', 'html', 'js', 'browser-sync', 'glide-css', 'glide-js', 'sass'], () => {
 	gulp.watch('src/styles/**/*.scss', ['sass']);
 	gulp.watch('src/**/*.html', browserSync.reload);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
@@ -81,7 +104,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('clean-temp', () => {
-	return del.sync(['src/css', 'src/js-min', 'src/index.build.html']);
+	return del.sync(['src/css', 'src/index.build.html', 'src/js/build.js']);
 });
 
 gulp.task('img:build', () => {
@@ -97,12 +120,12 @@ gulp.task('img:build', () => {
 		.pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('build', ['clean', 'clean-temp', 'html:build', 'css:build', 'js', 'img:build', 'sass'], () => {
+gulp.task('build', ['clean', 'clean-temp', 'glide-css', 'css:build', 'html:build', 'js', 'img:build', 'glide-js', 'sass'], () => {
 
 	const buildFonts = gulp.src('src/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));
 
-	const buildJs = gulp.src('src/js-min/js/*.js')
+	const buildJs = gulp.src('src/js/build.js')
 		.pipe(gulp.dest('dist/js'));
 
 	const buildLibs = gulp.src('src/libs/**/*')
@@ -111,6 +134,6 @@ gulp.task('build', ['clean', 'clean-temp', 'html:build', 'css:build', 'js', 'img
 
 gulp.task('clear', (callback) => {
 	return cache.clearAll();
-})
+});
 
 gulp.task('default', ['watch']);

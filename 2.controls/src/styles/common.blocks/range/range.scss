@@ -1,9 +1,10 @@
+@import "../../variables/variables.scss";
 [slider] {
   position: relative;
   height: 10px;
   border-radius: 10px;
   text-align: left;
-  margin: 30px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 [slider]>div {
@@ -134,6 +135,9 @@ div[slider]>input[type=range]::-ms-tooltip {
 
 [slider]>div>[sign] {
   opacity: 0;
+  @media(max-width: $lg) {
+    opacity: 1;
+  }
   position: absolute;
   margin-left: -15px;
   top: -39px;

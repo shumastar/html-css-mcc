@@ -1,6 +1,6 @@
 @import "../../../variables/variables.scss";
 .button-add__icon {
-  padding: 0 10%;
+  padding: 0 5px;
   @media(max-width: $xs) {
     padding: 0 3px;
   }

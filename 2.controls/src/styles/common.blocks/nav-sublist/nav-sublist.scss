@@ -10,6 +10,7 @@
     text-align: left;
     text-transform: none;
     cursor: default;
+    z-index: 5;
 }
 
 .nav-list__item_link:hover+.nav-sublist {

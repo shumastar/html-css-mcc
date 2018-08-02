@@ -1,11 +1,13 @@
 @import "../../variables/variables.scss";
+@import "../button/button.scss";
 .modal {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
+  border-radius: 5px;
   width: 40%;
-  @media(max-width: $xs) {
+  @media(max-width: $md) {
     width: 80%;
   }
 }
@@ -25,7 +27,7 @@
 }
 
 .modal__title {
-  font-size: 29px;
+  font-size: 30px;
   line-height: 57px;
   color: rgb(0, 0, 0);
   font-family: "Lato";
@@ -57,7 +59,7 @@
 .modal-form-date__input {
   width: 100%;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 16px;
   &:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -74,7 +76,7 @@
 .modal-form-quontity__input {
   width: 100%;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 16px;
   &:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -91,7 +93,7 @@
 .modal-form-phone__input {
   width: 100%;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 16px;
   &:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -108,7 +110,7 @@
 .modal-form-name__input {
   width: 100%;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 16px;
   &:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -125,7 +127,7 @@
 .modal-form-email__input {
   width: 100%;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 16px;
   &:focus-within {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -148,14 +150,12 @@
 }
 
 .button-send {
-  display: block;
+  @extend .button;
   width: 25%;
   margin: 20px auto;
   background-color: #333333;
   color: #ffffff;
   border-radius: 5px;
-  font-size: 18px;
-  line-height: 61px;
   font-family: "Lato";
   font-weight: bold;
   text-align: center;
@@ -170,4 +170,8 @@
 .icon-paper-plane:before {
   content: '\f1d8';
   color: #ffffff;
+}
+
+input::-webkit-calendar-picker-indicator{
+  display: none;
 }

@@ -31,6 +31,9 @@
   &_link:visited {
     text-decoration: none;
   }
+  &_link:focus {
+    border: .5px dotted #00c8c8;
+  }
   @media(max-width: $xs) {
     padding: 10px 0;
   }

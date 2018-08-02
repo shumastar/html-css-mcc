@@ -1,4 +1,6 @@
+@import "../../../variables/variables.scss";
 .tab-list__item {
+  display: block;
   font-size: 16px;
   background-color: inherit;
   float: left;
@@ -7,12 +9,23 @@
   cursor: pointer;
   padding: 14px 30px;
   transition: 0.3s;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $primary-color;
   &:hover {
-    background-color: #00c8c8;
-    color: #ffffff;
+    background-color: $brand-color;
+    color: $white;
+    text-decoration: none;
   }
-  &.active {
-    background-color: #333333;
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+  &:focus {
+    border: .5px dotted #00c8c8;
+  }
+  &_active {
+    background-color: $secondary-color;
     color: #ffffff;
   }
 }

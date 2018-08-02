@@ -17,5 +17,8 @@
     &_link:visited {
       text-decoration: none;
     }
+    &:focus {
+      border: .5px dotted #00c8c8;
+    }
   }
 }

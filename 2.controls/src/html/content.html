@@ -1,40 +1,40 @@
 <div class="layout__content">
   <div class="product-info">
     <!-- slider-start -->
-    <div class="simple-slider simple-slider-first product-info__photo product-photo">
-      <div class="slider-wrapper">
-        <div class="slider-slide slide-1">
-        </div>
-        <div class="slider-slide slide-2">
-        </div>
-      </div>
-      <div class="slider-btn slider-btn-prev arrows__left">
-        <i class="icon-left-open"></i>
-      </div>
-      <div class="slider-btn slider-btn-next arrows__right">
-        <i class="icon-right-open"></i>
+    <div class="glide product-info__photo product-photo">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img src="./img/product-1.png" alt="" class="product-photo__slide">
+          </li>
+          <li class="glide__slide">
+            <img src="./img/product-1.png" alt="" class="product-photo__slide">
+          </li>
+        </ul>
+        <button id="slider-button-backward" class="arrows__left">
+          <i class="icon-left-open"></i>
+        </button>
+        <button id="slider-button-forward" class="arrows__right">
+          <i class="icon-right-open"></i>
+        </button>
       </div>
     </div>
+
     <!-- slider-end -->
     <div class="product-info__description product-description">
       <div class="product-description__title">ave classic sweatshirt</div>
       <div class="product-description__links product-links">
         <!-- stars-start -->
-        <div class="product-links__item rating">
-          <input type="radio" id="star5" name="rating" value="5" />
-          <label for="star5">5 stars</label>
-          <input type="radio" id="star4" name="rating" value="4" />
-          <label for="star4">4 stars</label>
-          <input type="radio" id="star3" name="rating" value="3" />
-          <label for="star3">3 stars</label>
-          <input type="radio" id="star2" name="rating" value="2" />
-          <label for="star2">2 stars</label>
-          <input type="radio" id="star1" name="rating" value="1" />
-          <label for="star1">1 star</label>
+        <div id="rating-stars" class="rating">
+          <span id="rating-5" class="rating__star">&#128970; </span>
+          <span id="rating-4" class="rating__star">🟊</span>
+          <span id="rating-3" class="rating__star">&#x1f7ca;</span>
+          <span id="rating-2" class="rating__star">&#x1f7ca;</span>
+          <span id="rating-1" class="rating__star">&#x1f7ca;</span>
         </div>
         <!-- stars-end -->
         <div class="product-links__item">
-          <a href="#reviews" class="product-links__item_link" onclick="openTab(event, 'reviews-tab')">3 Review(s)</a> |</div>
+          <a href="#reviews-tab" class="product-links__item_link">3 Review(s)</a> |</div>
         <div class="product-links__item">
           <a href="#" class="product-links__item_link">Add a Review</a> |</div>
         <div class="product-links__item">Share:
@@ -77,34 +77,36 @@
         <a href="#" class="product-description__tags_link">Loose</a>
       </div>
       <!-- color-start -->
-      <div class="product-description__color color">
-        <label class="container color" onclick="setColor(event, 'blue')" id="blue">Blue
-          <input type="radio" onclick="checked" name="radio">
-          <span class="checkmark"></span>
+      <div class="product-description__color-selection color-selection">
+        <label class="color-selection__item color-item">Blue
+          <input type="radio" name="radio" class="color-item__radio">
+          <span class="color-item__cross"></span>
         </label>
-        <label class="container color" onclick="setColor(event, 'yellow')" id="yellow">Yellow
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
+        <label class="color-selection__item color-item">Yellow
+          <input type="radio" name="radio" class="color-item__radio">
+          <span class="color-item__cross"></span>
         </label>
-        <label class="container color" onclick="setColor(event, 'red')" id="red">Red
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
+        <label class="color-selection__item color-item">Red
+          <input type="radio" name="radio" class="color-item__radio">
+          <span class="color-item__cross"></span>
         </label>
-        <label class="container color" onclick="setColor(event, 'green')" id="green">Green
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
+        <label class="color-selection__item color-item">Green
+          <input type="radio" name="radio" class="color-item__radio">
+          <span class="color-item__cross"></span>
         </label>
-        <label class="container color" onclick="setColor(event, 'black')" id="black">Black
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
+        <label class="color-selection__item color-item">Black
+          <input type="radio" name="radio" class="color-item__radio">
+          <span class="color-item__cross"></span>
         </label>
-        <label class="container color" onclick="setColor(event, 'white')" id="white">White
-          <input type="radio" name="radio">
-          <span class="checkmark"></span>
+        <label class="color-selection__item color-item">White
+          <input type="radio" name="radio" class="color-item__radio">
+          <span class="color-item__cross"></span>
         </label>
       </div>
       <!-- color-end -->
       <!-- range-start -->
+      <span>0%</span>
+      <span style="float: right;">100%</span>
       <div slider id="slider-distance">
         <div>
           <div inverse-left style="width:70%;"></div>
@@ -119,7 +121,7 @@
             <span id="value">60</span>
           </div>
         </div>
-        <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+        <input type="range" value="30" max="100" min="0" step="1" oninput="
           this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
           var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
           var children = this.parentNode.childNodes[1].childNodes;
@@ -142,7 +144,7 @@
         <div>
           <label for="colour" class="multiple-selection__label">COLOUR</label>
           <select name="colour" id="color">
-            <option disabled selected>Select a colour</option>
+            <option disabled selected>Select colour</option>
             <option>Blue</option>
             <option>Red</option>
             <option>Green</option>
@@ -168,41 +170,41 @@
         </div>
       </div>
       <div class="product-description__buttons-list">
-        <div class="buttons-list__button button-order" id="open-modal">
+        <button class="buttons-list__button button-order" id="open-modal">
           <div class="button-order__icon">
             <i class="icon-basket"></i>
           </div>
           <div class="button-order__title">
             ORDER
           </div>
-        </div>
-        <div class="buttons-list__button button-add">
+        </button>
+        <button class="buttons-list__button button-add">
           <div class="button-add__icon">
             <i class="icon-heart"></i>
           </div>
           <div class="button-add__title">
             ADD TO LOOKBOOK
           </div>
-        </div>
+        </button>
       </div>
-      <div class="product-description__compare button-compare">
+      <button class="product-description__compare button-compare">
         <div class="button-compare__icon">
           <i class="icon-exchange"></i>
         </div>
         <div class="button-compare__title">ADD TO COMPARE
         </div>
-      </div>
+      </button>
     </div>
   </div>
   <div class="layout__general-info">
-    <div class="tab-list">
-      <button class="tab-list__item" onclick="openTab(event, 'description-tab')">DESCRIPTION</button>
-      <button class="tab-list__item" onclick="openTab(event, 'video-tab')">VIDEO</button>
-      <button class="tab-list__item" onclick="openTab(event, 'size-tab')">SIZE & SPECS</button>
-      <button class="tab-list__item" onclick="openTab(event, 'delivery-tab')">DELIVERY & RETURNS</button>
-      <button class="tab-list__item" onclick="openTab(event, 'reviews-tab')" id="reviews">REVIEWS</button>
+    <div class="tab-list" id="tab-list">
+      <a href="#description-tab" class="tab-list__item tab-list__item_active">DESCRIPTION</a>
+      <a href="#video-tab" class="tab-list__item">VIDEO</a>
+      <a href="#size-tab" class="tab-list__item">SIZE & SPECS</a>
+      <a href="#delivery-tab" class="tab-list__item">DELIVERY & RETURNS</a>
+      <a href="#reviews-tab" class="tab-list__item">REVIEWS</a>
     </div>
-    <div id="description-tab" class="tab-list__content">
+    <div id="description-tab" class="tab-list__content tab-list__content_active">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate velit. Ut nostrum obcaecati temporibus
         modi unde. Voluptatibus facilis distinctio, architecto quos accusamus totam quaerat necessitatibus numquam, cum enim
         explicabo? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis repellendus quisquam, eius ratione

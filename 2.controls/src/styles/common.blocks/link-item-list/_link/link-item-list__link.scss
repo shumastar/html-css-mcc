@@ -16,4 +16,7 @@
     &_hover:visited {
         text-decoration: none;
     }
+    &_hover:focus {
+        border: .5px dotted #00c8c8;
+    }
 }

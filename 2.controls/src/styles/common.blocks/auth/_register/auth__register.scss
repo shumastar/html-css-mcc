@@ -18,4 +18,7 @@
   &_link:visited {
     text-decoration: none;
   }
+  &_link:focus {
+   color: $brand-color;;
+  }
 }

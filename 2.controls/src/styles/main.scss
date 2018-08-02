@@ -1,3 +1,4 @@
+@import "normalize";
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot');
@@ -7,7 +8,7 @@
 }
 
 body {
-  margin: 0;  
+  margin: 0;
 }
 
 [class^="icon-"]:before,

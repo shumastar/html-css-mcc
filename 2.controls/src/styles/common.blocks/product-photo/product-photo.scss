@@ -1,18 +1,17 @@
 @import "../../variables/variables.scss";
 .product-photo {
   width: 48%;
-  @media(max-width: $mobile) {
+  height: 710px;
+  @media(max-width: $xs) {
     width: 100%;
-    height: 400px;
-  }
-  @media(min-width: $mobile) and (max-width: $xs) {
-    width: 80%;
-    height: 400px;
-    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
   }
 }
 
-.slide-1,
-.slide-2 {
-  background-image: url(../img/product.png);
+.product-photo__slide {
+  display: block;
+  width: inherit;
+  max-width: 100%;
+  height: auto;
 }

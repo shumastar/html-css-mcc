@@ -3,4 +3,7 @@
     &:hover {
         color: #00c8c8;
     }
+    &:focus {
+        border: .5px dotted #00c8c8;
+    }
 }

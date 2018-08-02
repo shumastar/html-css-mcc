@@ -2,11 +2,11 @@
 .product-description__buttons-list {
   margin-top: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   @media(max-width: $xs) {
     margin-top: 30px;
   }
-  @media(min-width: $mobile) and (max-width: $md) {
+  @media(min-width: $mobile) and (max-width: $sm) {
     justify-content: space-around;
   }
 }

@@ -1,4 +1,8 @@
 .layout__slider {
   width: 100%;
-  background-color: #ffffff;
+  background-blend-mode: multiply;
+  background-image: url(../img/banner-ave1.png), url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 80%, 100%;
 }
