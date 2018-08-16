@@ -31,6 +31,7 @@
     "node-normalize-scss": "^8.0.0"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.2.2"
+    "@glidejs/glide": "^3.2.2",
+    "nouislider": "^11.1.0"
   }
 }

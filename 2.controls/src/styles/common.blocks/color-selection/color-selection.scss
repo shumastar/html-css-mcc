@@ -23,8 +23,7 @@
   -ms-user-select: none;
   user-select: none;
   width: 30%;
-  padding: 10px 3px 10px 40px;
-  //padding: 4% 1% 4% 16%;
+  padding: 10px 3px 10px 40px; //padding: 4% 1% 4% 16%;
 }
 
 .color-item__radio {
@@ -62,4 +61,8 @@
   color: #ffffff;
   transition: 0.5s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.color-selection:focus-within{
+  border: .1px dotted #777777;
 }

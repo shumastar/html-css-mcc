@@ -120,7 +120,7 @@ gulp.task('img:build', () => {
 		.pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('build', ['clean', 'clean-temp', 'glide-css', 'css:build', 'html:build', 'js', 'img:build', 'glide-js', 'sass'], () => {
+gulp.task('build', ['clean', 'clean-temp', 'html:build', 'js', 'glide-css', 'css:build', 'img:build', 'glide-js'], () => {
 
 	const buildFonts = gulp.src('src/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));

@@ -1,19 +1,23 @@
-<div id="modal-window" class="layout__modal">
+<div id="order-modal-window" class="layout__modal">
   <div class="modal">
-    <span class="modal__close">&times;</span>
+    <button class="modal__close" id="close-order-modal" type="reset" form="main-form">&times;</button>
     <div class="modal__title">Order</div>
     <form action="" class="modal__form modal-form" id="order-form">
       <div class="modal-form__date modal-form-date">
         <label for="" class="modal-form-date__label">Date</label>
-        <input type="date" class="modal-form-date__input">
+        <input type="date" class="modal-form-date__input" value="">
       </div>
       <div class="modal-form__quontity modal-form-quontity">
         <label for="" class="modal-form-quontity__label">Quontity</label>
-        <input type="number" class="modal-form-quontity__input">
+        <input type="number" class="modal-form-quontity__input" value="">
       </div>
-      <div class="modal-form__phone modal-form-phone">
-        <label for="" class="modal-form-phone__label">Phone</label>
-        <input type="tel" class="modal-form-phone__input" placeholder="+375-xx-xxxxxxx">
+      <div class="modal-form__color modal-form-color">
+        <label for="" class="modal-form-color__label">Color</label>
+        <input type="text" class="modal-form-color__input" placeholder="Color">
+      </div>
+      <div class="modal-form__size modal-form-size">
+        <label for="" class="modal-form-size__label">Size</label>
+        <input type="text" class="modal-form-size__input" placeholder="Size">
       </div>
       <div class="modal-form__name modal-form-name">
         <label for="" class="modal-form-name__label">Name</label>
@@ -28,9 +32,34 @@
         <textarea name="" id="" rows="4" class="modal-form-message__input" placeholder="Write text"></textarea>
       </div>
     </form>
-    <button class="button-send" type="submit" form="order-form">
+    <button class="button-send" type="submit" form="order-form" id="send-order">
       <i class="icon-paper-plane"></i>
       &nbsp;Send
     </button>
+  </div>
+</div>
+
+<div id="review-modal-window" class="layout__modal">
+  <div class="modal">
+      <button class="modal__close" id="close-review-modal" type="" form="">&times;</button>
+    <div class="modal__title">Add Review</div>
+    <div>
+      <textarea name="" id="text-review"  placeholder="Write your review"></textarea>
+    </div>
+    <div class="modal-form__name modal-form-name">
+      <input type="text" class="modal-form-name__input" placeholder="Your Name" id="name-review">
+    </div>
+    <button class="button-send" type="button" form="order-form" id="send-review" disabled>
+      <i class="icon-paper-plane"></i>
+      &nbsp;Send
+    </button>
+  </div>
+</div>
+
+
+<div id="added-review-modal-window" class="layout__modal">
+  <div class="modal">
+      <button class="modal__close" id="close-added-review-modal" type="" form="">&times;</button>
+    <div class="modal__title">You have already added the review.</div>
   </div>
 </div>

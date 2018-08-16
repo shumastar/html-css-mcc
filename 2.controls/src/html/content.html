@@ -26,17 +26,17 @@
       <div class="product-description__links product-links">
         <!-- stars-start -->
         <div id="rating-stars" class="rating">
-          <span id="rating-5" class="rating__star">&#128970; </span>
-          <span id="rating-4" class="rating__star">🟊</span>
-          <span id="rating-3" class="rating__star">&#x1f7ca;</span>
-          <span id="rating-2" class="rating__star">&#x1f7ca;</span>
-          <span id="rating-1" class="rating__star">&#x1f7ca;</span>
+          <span id="rating-5" class="rating__star"></span>
+          <span id="rating-4" class="rating__star"></span>
+          <span id="rating-3" class="rating__star"></span>
+          <span id="rating-2" class="rating__star"></span>
+          <span id="rating-1" class="rating__star"></span>
         </div>
         <!-- stars-end -->
         <div class="product-links__item">
-          <a href="#reviews-tab" class="product-links__item_link">3 Review(s)</a> |</div>
+          <a href="#tab-list" class="product-links__item_link">3 Review(s)</a> |</div>
         <div class="product-links__item">
-          <a href="#" class="product-links__item_link">Add a Review</a> |</div>
+          <a href="#review-modal-window" class="product-links__item_link" id="open-review-modal">Add a Review</a> |</div>
         <div class="product-links__item">Share:
           <a href="#" class="product-links__item_link">
             <i class="icon-facebook-small"></i>
@@ -76,52 +76,53 @@
         <a href="#" class="product-description__tags_link">V-neck,</a>
         <a href="#" class="product-description__tags_link">Loose</a>
       </div>
-      <!-- color-start -->
-      <div class="product-description__color-selection color-selection">
-        <label class="color-selection__item color-item">Blue
-          <input type="radio" name="radio" class="color-item__radio">
-          <span class="color-item__cross"></span>
-        </label>
-        <label class="color-selection__item color-item">Yellow
-          <input type="radio" name="radio" class="color-item__radio">
-          <span class="color-item__cross"></span>
-        </label>
-        <label class="color-selection__item color-item">Red
-          <input type="radio" name="radio" class="color-item__radio">
-          <span class="color-item__cross"></span>
-        </label>
-        <label class="color-selection__item color-item">Green
-          <input type="radio" name="radio" class="color-item__radio">
-          <span class="color-item__cross"></span>
-        </label>
-        <label class="color-selection__item color-item">Black
-          <input type="radio" name="radio" class="color-item__radio">
-          <span class="color-item__cross"></span>
-        </label>
-        <label class="color-selection__item color-item">White
-          <input type="radio" name="radio" class="color-item__radio">
-          <span class="color-item__cross"></span>
-        </label>
-      </div>
-      <!-- color-end -->
-      <!-- range-start -->
-      <span>0%</span>
-      <span style="float: right;">100%</span>
-      <div slider id="slider-distance">
-        <div>
-          <div inverse-left style="width:70%;"></div>
-          <div inverse-right style="width:70%;"></div>
-          <div range style="left:30%;right:40%;"></div>
-          <span thumb style="left:30%;"></span>
-          <span thumb style="left:60%;"></span>
-          <div sign style="left:30%;">
-            <span id="value">30</span>
-          </div>
-          <div sign style="left:60%;">
-            <span id="value">60</span>
-          </div>
+      <form action="" id="main-form">
+        <!-- color-start -->
+        <div class="product-description__color-selection color-selection">
+          <label class="color-selection__item color-item">Blue
+            <input type="radio" name="radio" class="color-item__radio" value="Blue" tabindex="">
+            <span class="color-item__cross"></span>
+          </label>
+          <label class="color-selection__item color-item">Yellow
+            <input type="radio" name="radio" class="color-item__radio" value="Yellow" tabindex="">
+            <span class="color-item__cross"></span>
+          </label>
+          <label class="color-selection__item color-item">Red
+            <input type="radio" name="radio" class="color-item__radio" value="Red" tabindex="">
+            <span class="color-item__cross"></span>
+          </label>
+          <label class="color-selection__item color-item">Green
+            <input type="radio" name="radio" class="color-item__radio" value="Green" tabindex="">
+            <span class="color-item__cross"></span>
+          </label>
+          <label class="color-selection__item color-item">Black
+            <input type="radio" name="radio" class="color-item__radio" value="Black" tabindex="">
+            <span class="color-item__cross"></span>
+          </label>
+          <label class="color-selection__item color-item">White
+            <input type="radio" name="radio" class="color-item__radio" value="White" tabindex="">
+            <span class="color-item__cross"></span>
+          </label>
         </div>
-        <input type="range" value="30" max="100" min="0" step="1" oninput="
+        <!-- color-end -->
+        <!-- range-start -->
+        <span>0%</span>
+        <span style="float: right;">100%</span>
+        <div slider id="slider-distance">
+          <div>
+            <div inverse-left style="width:70%;"></div>
+            <div inverse-right style="width:70%;"></div>
+            <div range style="left:30%;right:40%;"></div>
+            <span thumb style="left:30%;"></span>
+            <span thumb style="left:60%;"></span>
+            <div sign style="left:30%;">
+              <span id="value">30</span>
+            </div>
+            <div sign style="left:60%;">
+              <span id="value">60</span>
+            </div>
+          </div>
+          <input type="range" value="30" max="100" min="0" step="1" oninput="
           this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
           var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
           var children = this.parentNode.childNodes[1].childNodes;
@@ -130,7 +131,7 @@
           children[7].style.left=value+'%';children[11].style.left=value+'%';
           children[11].childNodes[1].innerHTML=this.value;" />
 
-        <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+          <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
           this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
           var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
           var children = this.parentNode.childNodes[1].childNodes;
@@ -138,71 +139,72 @@
           children[5].style.right=(100-value)+'%';
           children[9].style.left=value+'%';children[13].style.left=value+'%';
           children[13].childNodes[1].innerHTML=this.value;" />
-      </div>
-      <!-- range-end -->
-      <div class="product-description__multiple-selection">
-        <div>
-          <label for="colour" class="multiple-selection__label">COLOUR</label>
-          <select name="colour" id="color">
-            <option disabled selected>Select colour</option>
-            <option>Blue</option>
-            <option>Red</option>
-            <option>Green</option>
-            <option>Yellow</option>
-            <option>Black</option>
-            <option>White</option>
-          </select>
         </div>
-        <div>
-          <label for="size" class="multiple-selection__label">SIZE</label>
-          <select name="size" id="size">
-            <option disabled selected>Select size</option>
-            <option>X-Small</option>
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-            <option>X-Large</option>
-          </select>
-        </div>
-        <div>
-          <label for="spinner" class="multiple-selection__label multiple-selection__label_small">QTY</label>
-          <input id="spinner" name="value">
-        </div>
-      </div>
-      <div class="product-description__buttons-list">
-        <button class="buttons-list__button button-order" id="open-modal">
-          <div class="button-order__icon">
-            <i class="icon-basket"></i>
+        <!-- range-end -->
+        <div class="product-description__multiple-selection">
+          <div>
+            <label for="colour" class="multiple-selection__label">COLOUR</label>
+            <select name="colour" id="color">
+              <option disabled selected value="">Select colour</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+              <option value="Green">Green</option>
+              <option value="Yellow">Yellow</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+            </select>
           </div>
-          <div class="button-order__title">
-            ORDER
+          <div>
+            <label for="size" class="multiple-selection__label">SIZE</label>
+            <select name="size" id="size">
+              <option disabled selected value="">Select size</option>
+              <option>X-Small</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+              <option>X-Large</option>
+            </select>
+          </div>
+          <div>
+            <label for="spinner" class="multiple-selection__label multiple-selection__label_small">QTY</label>
+            <input id="spinner" name="value" value="">
+          </div>
+        </div>
+        <div class="product-description__buttons-list">
+          <button class="buttons-list__button button-order" id="open-order-modal" type="button" disabled>
+            <div class="button-order__icon">
+              <i class="icon-basket"></i>
+            </div>
+            <div class="button-order__title">
+              ORDER
+            </div>
+          </button>
+          <button class="buttons-list__button button-add">
+            <div class="button-add__icon">
+              <i class="icon-heart"></i>
+            </div>
+            <div class="button-add__title">
+              ADD TO LOOKBOOK
+            </div>
+          </button>
+        </div>
+        <button class="product-description__compare button-compare">
+          <div class="button-compare__icon">
+            <i class="icon-exchange"></i>
+          </div>
+          <div class="button-compare__title">ADD TO COMPARE
           </div>
         </button>
-        <button class="buttons-list__button button-add">
-          <div class="button-add__icon">
-            <i class="icon-heart"></i>
-          </div>
-          <div class="button-add__title">
-            ADD TO LOOKBOOK
-          </div>
-        </button>
-      </div>
-      <button class="product-description__compare button-compare">
-        <div class="button-compare__icon">
-          <i class="icon-exchange"></i>
-        </div>
-        <div class="button-compare__title">ADD TO COMPARE
-        </div>
-      </button>
+      </form>
     </div>
   </div>
   <div class="layout__general-info">
     <div class="tab-list" id="tab-list">
-      <a href="#description-tab" class="tab-list__item tab-list__item_active">DESCRIPTION</a>
-      <a href="#video-tab" class="tab-list__item">VIDEO</a>
-      <a href="#size-tab" class="tab-list__item">SIZE & SPECS</a>
-      <a href="#delivery-tab" class="tab-list__item">DELIVERY & RETURNS</a>
-      <a href="#reviews-tab" class="tab-list__item">REVIEWS</a>
+      <button type="button" href="#description-tab" class="tab-list__item tab-list__item_active">DESCRIPTION</button>
+      <button href="#video-tab" class="tab-list__item">VIDEO</button>
+      <button href="#size-tab" class="tab-list__item">SIZE & SPECS</button>
+      <button href="#delivery-tab" class="tab-list__item">DELIVERY & RETURNS</button>
+      <button href="#reviews-tab" class="tab-list__item">REVIEWS</button>
     </div>
     <div id="description-tab" class="tab-list__content tab-list__content_active">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, cupiditate velit. Ut nostrum obcaecati temporibus
@@ -234,7 +236,7 @@
         veritatis mollitia pariatur!</p>
     </div>
     <div id="reviews-tab" class="tab-list__content">
-      <ul>
+      <ul id="review-list">
         <li>First</li>
         <li>Second</li>
         <li>Third</li>

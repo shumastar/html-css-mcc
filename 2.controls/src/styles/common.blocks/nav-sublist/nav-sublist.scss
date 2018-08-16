@@ -18,7 +18,13 @@
     visibility: visible;
 }
 
-.nav-sublist:hover {
+.nav-list__item_link:focus+.nav-sublist {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-sublist:hover,
+.nav-sublist:focus {
     opacity: 1;
     visibility: visible;
 }

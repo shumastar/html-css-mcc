@@ -1,30 +1,27 @@
 @import "../../variables/variables.scss";
 .rating {
-  float: left;
+  display: flex;
   unicode-bidi: bidi-override;
   direction: rtl;
-  font-size: 28px;
-  margin-top: -3px;
+  margin-top: -7px;
   color: lightgray;
-  margin-left: 10px;
   margin-right: 10px;
-  @media(max-width: $xs) {
-    margin-top: 10px;
-  }
+  align-items: center;
 }
 
 .rating>.rating__star {
-  display: inline-block;
-  position: relative;
-  width: 0.4em;
+  display: block;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
+  background-image: url(../img/star.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.rating>.rating__star:hover:before,
-.rating>.rating__star:hover~.rating__star:before,
-.rating>.rating__star.rating__star_rated:before,
-.rating>.rating__star.rating__star_rated~.rating__star:before {
-  content: "\1f7ca";
-  position: absolute;
-  color: gold;
+.rating>.rating__star:hover,
+.rating>.rating__star:hover~.rating__star,
+.rating>.rating__star.rating__star_rated,
+.rating>.rating__star.rating__star_rated~.rating__star {
+  background-image: url(../img/star_rated.svg);
 }
