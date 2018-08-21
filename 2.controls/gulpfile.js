@@ -49,12 +49,13 @@ gulp.task('glide-css', () => {
 	return gulp.src([
 			'node_modules/@glidejs/glide/dist/css/glide.core.min.css',
 			'node_modules/@glidejs/glide/dist/css/glide.theme.min.css',
+			'node_modules/nouislider/distribute/nouislider.css',
 		])
 		.pipe(concat('glide.css'))
 		.pipe(gulp.dest('src/css'))
 		.pipe(browserSync.reload({
 			stream: true
-		}))
+		}));
 });
 
 gulp.task('browser-sync', () => {
@@ -68,10 +69,7 @@ gulp.task('browser-sync', () => {
 });
 
 gulp.task('js', () => {
-	return gulp.src('src/**/*.js')
-		// .pipe(babel({
-		// 	presets: ['env']
-		// }))
+	return gulp.src('src/js/*.js')
 		.pipe(uglify())
 		.pipe(concat('build.js'))
 		.pipe(gulp.dest('src/js'));
@@ -83,17 +81,25 @@ gulp.task('glide-js', () => {
 		.pipe(gulp.dest('src/libs'));
 });
 
+gulp.task('nouislider-js', () => {
+	return gulp.src('node_modules/nouislider/distribute/nouislider.js')
+		//.pipe(uglify())
+		.pipe(gulp.dest('src/libs'));
+});
+
+
 gulp.task('css:build', ['sass'], () => {
 	return gulp.src('src/css/*.css')
-		.pipe(cssnano())
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
+		/*.pipe(cssnano({
+			autoprefixer: {
+				browsers: ['last 16 versions'],
+				add: true
+			}
+		}))*/
 		.pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('watch', ['clean-temp', 'html', 'js', 'browser-sync', 'glide-css', 'glide-js', 'sass'], () => {
+gulp.task('watch', ['clean-temp', 'html', 'js', 'browser-sync', 'glide-css', 'glide-js', 'nouislider-js', 'sass'], () => {
 	gulp.watch('src/styles/**/*.scss', ['sass']);
 	gulp.watch('src/**/*.html', browserSync.reload);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
@@ -120,7 +126,7 @@ gulp.task('img:build', () => {
 		.pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('build', ['clean', 'clean-temp', 'html:build', 'js', 'glide-css', 'css:build', 'img:build', 'glide-js'], () => {
+gulp.task('build', ['clean', 'clean-temp', 'html:build', 'js', 'glide-css', 'css:build', 'img:build', 'glide-js', 'nouislider-js'], () => {
 
 	const buildFonts = gulp.src('src/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));

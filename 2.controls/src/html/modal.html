@@ -36,20 +36,23 @@
       <i class="icon-paper-plane"></i>
       &nbsp;Send
     </button>
+    <button class="button-cancel" type="button" form="order-form" id="cancel-order">
+      Cancel
+    </button>
   </div>
 </div>
 
 <div id="review-modal-window" class="layout__modal">
   <div class="modal">
-      <button class="modal__close" id="close-review-modal" type="" form="">&times;</button>
+    <button class="modal__close" id="close-review-modal" type="" form="">&times;</button>
     <div class="modal__title">Add Review</div>
     <div>
-      <textarea name="" id="text-review"  placeholder="Write your review"></textarea>
+      <textarea name="" id="text-review" placeholder="Write your review"></textarea>
     </div>
     <div class="modal-form__name modal-form-name">
       <input type="text" class="modal-form-name__input" placeholder="Your Name" id="name-review">
     </div>
-    <button class="button-send" type="button" form="order-form" id="send-review" disabled>
+    <button class="button-send" type="submit" form="order-form" id="send-review" disabled>
       <i class="icon-paper-plane"></i>
       &nbsp;Send
     </button>
@@ -59,7 +62,7 @@
 
 <div id="added-review-modal-window" class="layout__modal">
   <div class="modal">
-      <button class="modal__close" id="close-added-review-modal" type="" form="">&times;</button>
+    <button class="modal__close" id="close-added-review-modal" type="" form="">&times;</button>
     <div class="modal__title">You have already added the review.</div>
   </div>
 </div>

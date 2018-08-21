@@ -7,27 +7,17 @@
   border: 1px solid #888;
   border-radius: 5px;
   width: 40%;
-  animation: linear .4s linear;
-  @-webkit-keyframes linear {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(0);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0);
-    }
-  }
-  @-moz-keyframes linear {
-    0% {
-      opacity: 0;
-      -moz-transform: translateY(0);
-    }
-    100% {
-      opacity: 1;
-      -moz-transform: translateY(0);
-    }
-  }
+  // animation: linear .4s linear;
+  // @keyframes linear {
+  //   0% {
+  //     opacity: 0;
+  //     -webkit-transform: translateY(0);
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //     -webkit-transform: translateY(0);
+  //   }
+  // }
   @media(max-width: $md) {
     width: 80%;
   }

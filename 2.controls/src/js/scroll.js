@@ -4,6 +4,6 @@ $('a[href^="#"]').on('click', function (event) {
     event.preventDefault();
     $('html, body').stop().animate({
       scrollTop: target.offset().top
-    }, 1500);
+    }, 700);
   }
 });

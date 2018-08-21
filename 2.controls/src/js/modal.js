@@ -41,11 +41,8 @@ function Modal(modalId, openButtonId, closeButtonId) {
   this.closeButton.addEventListener("click", this.closeModal.bind(this));
 }
 
-
-var orderModal = new Modal('order-modal-window', 'open-order-modal', 'close-order-modal');
 if (sessionStorage.getItem('review')) {
   var addedReviewModal = new Modal('added-review-modal-window', 'open-review-modal', 'close-added-review-modal');
 } else {
   var reviewModal = new Modal('review-modal-window', 'open-review-modal', 'close-review-modal');
 }
-

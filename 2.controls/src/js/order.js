@@ -1,7 +1,9 @@
 (function () {
+  var orderModal = new Modal('order-modal-window', 'open-order-modal', 'close-order-modal');
   var buttonOrder = document.getElementById('open-order-modal');
   var buttonCloseOrder = document.getElementById('close-order-modal');
   var buttonSendOrder = document.getElementById('send-order');
+  var buttonCancelOrder = document.getElementById('cancel-order');
 
   function createOrder() {
     var qty = document.getElementById("spinner");
@@ -45,6 +47,18 @@
     sessionStorage.removeItem('order');
   }
 
+  function cancelOrder() {
+    var qtyOrder = document.getElementsByClassName('modal-form-quontity__input')[0];
+    var savedOrder = JSON.parse(sessionStorage.getItem('order'));
+    savedOrder.productQty = qtyOrder.value;
+    var reWrittenOrder = JSON.stringify(savedOrder);
+    sessionStorage.setItem('order', reWrittenOrder);
+    var newQty = document.getElementById("spinner");
+    var newSavedOrder = JSON.parse(sessionStorage.getItem('order'));
+    newQty.value = newSavedOrder.productQty;
+    orderModal.closeModal();
+  }
+
   function enableButoon() {
     var mainColor = document.querySelector('.color-item__radio:checked');
     var qty = document.getElementById("spinner");
@@ -62,5 +76,6 @@
   buttonOrder.addEventListener("click", modalOrder);
   buttonCloseOrder.addEventListener("click", clearOrder);
   buttonSendOrder.addEventListener("click", sendOrder);
+  buttonCancelOrder.addEventListener("click", cancelOrder);
   document.addEventListener("click", enableButoon);
 }());
