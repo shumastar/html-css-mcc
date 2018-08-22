@@ -1,0 +1,21 @@
+@import "../../../variables/variables.scss";
+.layout__logo {
+    width: 20%;
+    margin-right: 30%;
+    @media(max-width: $xs) {
+        margin-right: 0;
+        width: 100%;
+    }
+    @media (min-width: $xs) and (max-width: $sm) {
+        width: 50%;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+        width: 25%;
+    }
+    @media (min-width: $md) and (max-width: $xl) {
+        width: 30%;
+    }
+    @media (min-width: $xs) and (max-width: $xl) {
+        margin-right: 0;
+    }
+}

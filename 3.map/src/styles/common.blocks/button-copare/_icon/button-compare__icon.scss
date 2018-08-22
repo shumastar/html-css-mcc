@@ -1,0 +1,14 @@
+.button-compare__icon {
+  border-radius: 50%;
+  background-color: #333333;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.icon-exchange:before {
+  content: '\f0ec';
+  color: #ffffff;
+  font-size: 80%;
+}

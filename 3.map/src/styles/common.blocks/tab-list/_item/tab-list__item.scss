@@ -1,0 +1,31 @@
+@import "../../../variables/variables.scss";
+.tab-list__item {
+  display: block;
+  font-size: 16px;
+  background-color: inherit;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  transition: 0.3s;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $primary-color;
+  border: .1px solid transparent;
+  &:hover {
+    background-color: $brand-color;
+    color: $white;
+    text-decoration: none;
+  }
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+  &:focus {
+    border: .1px dotted #00c8c8;
+  }
+  &_active {
+    background-color: $secondary-color;
+    color: #ffffff;
+  }
+}

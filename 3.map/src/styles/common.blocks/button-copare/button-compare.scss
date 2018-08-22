@@ -1,0 +1,19 @@
+@import "../../variables/variables.scss";
+@import "../button/button.scss";
+.button-compare {
+  @extend .button;
+  width: 230px;
+  border-color: $white;
+  font-size: 17px;
+  @media(max-width: $md) {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    width: 200px;
+  }
+  @media(min-width: $sm) and (max-width: $md) {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+  }
+}

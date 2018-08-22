@@ -1,0 +1,23 @@
+.menu-mobile__ticker {
+  display: none;
+  &:checked ~ .menu-mobile__btn {
+    left: 90%;
+    background-color: #333333;
+  }
+  &:checked ~ .menu-mobile__nav {
+    left: 0;
+  }
+  &:checked ~ .menu-mobile__btn .menu-mobile__btn-logo-first {
+    -webkit-transform: rotate(45deg);
+    top: 7px;
+    background-color: #f8f8f8;
+  }
+  &:checked ~ .menu-mobile__btn .menu-mobile__btn-logo-second {
+    opacity: 0;
+  }
+  &:checked ~ .menu-mobile__btn .menu-mobile__btn-logo-third {
+    -webkit-transform: rotate(-45deg);
+    top: -7px;
+    background-color: #f8f8f8;
+  }
+}

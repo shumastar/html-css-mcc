@@ -1,0 +1,36 @@
+<div class="layout__content">
+  <div id="map" class="map"></div>
+</div>
+
+<script>
+  function initMap() {
+    var centerLatLng = new google.maps.LatLng(52.421988, 31.004684);
+    var mapOptions = {
+      center: centerLatLng,
+      zoom: 12
+    };
+    var i13 = new google.maps.LatLng(52.421988, 31.004684);
+    var l2 = new google.maps.LatLng(52.408225, 30.963443);
+    var r80 = new google.maps.LatLng(52.407585, 30.920778);
+
+    var markerI13 = new google.maps.Marker({
+      position: i13,
+      map: map,
+      animation: google.maps.Animation.DROP
+    });
+    var markerL2 = new google.maps.Marker({
+      position: i13,
+      map: map,
+      animation: google.maps.Animation.DROP
+    });
+    var markerR80 = new google.maps.Marker({
+      position: i13,
+      map: map,
+      animation: google.maps.Animation.DROP
+    });
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  }
+
+  google.maps.event.addDomListener(window, "load", initMap);
+</script>

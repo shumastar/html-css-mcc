@@ -1,0 +1,12 @@
+@import "../../../variables/variables.scss";
+.product-description__availability {
+  margin-top: 30px;
+  font-size: 13px;
+  &_uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  @media(max-width: $xs) {
+    margin-top: 10px;
+  }
+}

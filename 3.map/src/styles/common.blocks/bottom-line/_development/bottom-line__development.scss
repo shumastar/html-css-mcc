@@ -1,0 +1,7 @@
+@import "../../../variables/variables.scss";
+.bottom-line__development {
+    padding: 10px;
+    @media(max-width: $xs) {
+        display: none;
+    }
+}

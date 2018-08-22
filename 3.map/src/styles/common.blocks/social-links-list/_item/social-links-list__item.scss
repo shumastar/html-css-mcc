@@ -1,0 +1,36 @@
+@import "../../../variables/variables.scss";
+.social-links-list__item {
+    display: inline;
+    color: $white;
+    font-size: 250%;
+    @media(max-width: $xs) {
+        font-size: 200%;
+    }
+    margin: 0 20px;
+    line-height: 200px;
+    @media(max-width: $xs) {
+        line-height: 0px;
+    }
+    &_link {
+        color: $white;
+    }
+    &_link:hover {
+        color: $primary-color;
+    }
+}
+
+.icon-facebook:before {
+    content: '\f09a';
+}
+
+.icon-twitter:before {
+    content: '\f099';
+}
+
+.icon-instagram:before {
+    content: '\f16d';
+}
+
+.icon-pinterest:before {
+    content: '\f231';
+}

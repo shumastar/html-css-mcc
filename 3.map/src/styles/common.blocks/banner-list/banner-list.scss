@@ -1,0 +1,13 @@
+@import "../../variables/variables.scss";
+.banner-list {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: $xs) {
+        flex-wrap: wrap;
+    }
+    width: 100%;
+    margin-top: 50px;
+    @media(max-width: $xs) {
+        margin-top: 15px;
+    }
+}

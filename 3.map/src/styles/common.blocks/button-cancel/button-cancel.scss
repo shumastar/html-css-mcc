@@ -1,0 +1,17 @@
+@import "../../variables/variables.scss";
+@import "../button/button.scss";
+.button-cancel {
+  @extend .button;
+  width: 15%;
+  border-radius: 5px;
+  font-family: "Lato";
+  font-weight: bold;
+  text-align: center;
+  &:focus-within {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  @media(max-width: $xs) {
+    width: 50%;
+    margin: 20px auto;
+  }
+}

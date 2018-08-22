@@ -1,0 +1,80 @@
+#slider-handles {
+  margin: 10px 20px;
+  height: 10px;
+}
+
+.noUi-background {
+  &.noUi-vertical {
+    height: 200px;
+    margin: 0 auto 30px;
+  }
+}
+
+.noUi-base {
+  .noUi-connect {
+    background-color: #333333;
+    height: 100%;
+  }
+  .noUi-handle {
+    background-color: #ffffff;
+    border: 3px solid #333333;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+    color: #333333;
+    display: table;
+    font-size: 15px;
+    left: 0;
+    margin-left: -22px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: -5px;
+    z-index: 2;
+    .noUi-horizontal & {
+      cursor: ew-resize;
+    }
+    .noUi-vertical & {
+      cursor: ns-resize;
+    }
+    &.noUi-active {
+      z-index: 3;
+    }
+    &::before {
+      background: transparent; //content: attr(aria-valuetext);
+      display: table-cell;
+      font-size: 6px;
+      position: static;
+      width: 100%;
+      vertical-align: middle;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.noUi-tooltip {
+  display: none;
+}
+
+.noUi-active .noUi-tooltip {
+  display: block;
+}
+
+.noUi-target {
+  border: none;
+}
+
+.noUi-active .noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: 1px solid #333333;
+  background: #333333;
+  color: #ffffff;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 10px;
+}

@@ -1,0 +1,8 @@
+@import "../../../variables/variables.scss";
+.bottom-line__copyright {
+    padding: 10px;
+    margin-right: 45%;
+    @media(max-width: $xs) {
+        margin-right: 0;
+    }
+}

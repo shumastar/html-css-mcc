@@ -1,0 +1,8 @@
+.product-description__product-code {
+  margin-top: 10px;
+  font-size: 13px;
+  &_uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

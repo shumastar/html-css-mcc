@@ -1,0 +1,27 @@
+@import "../../variables/variables.scss";
+.rating {
+  display: flex;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  margin-top: -7px;
+  color: lightgray;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.rating>.rating__star {
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-image: url(../img/star.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rating>.rating__star:hover,
+.rating>.rating__star:hover~.rating__star,
+.rating>.rating__star.rating__star_rated,
+.rating>.rating__star.rating__star_rated~.rating__star {
+  background-image: url(../img/star_rated.svg);
+}

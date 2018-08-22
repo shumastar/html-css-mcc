@@ -1,0 +1,24 @@
+@import "../../variables/variables.scss";
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid $primary-color;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+    background-color: #2b2b2b;
+    color: $white;
+    transition: 0.2s;
+  }
+  &:not(:hover) {
+    transition: 0.2s;
+  }
+  &:focus {
+    border: .5px dotted #00c8c8;
+  }
+}

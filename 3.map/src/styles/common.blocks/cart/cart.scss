@@ -1,0 +1,17 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover {
+        background-color: #00c8c8;
+        color: #ffffff;
+        box-sizing: border-box;
+        transition: 0.2s;
+    }
+    &:not(:hover) {
+        transition: 0.2s;
+    }
+}

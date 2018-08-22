@@ -1,0 +1,27 @@
+@import "../../../variables/variables.scss";
+.product-description__tags {
+  margin-top: 10px;
+  font-size: 13px;
+  &_uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &_link {
+    color: $secondary-color;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+  }
+  &_link:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+  &_link:active,
+  &_link:visited {
+    text-decoration: none;
+  }
+  &_link:focus {
+    border: .5px dotted #00c8c8;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../variables/variables.scss";
+@import "../button/button.scss";
+.button-add {
+  @extend .button;
+  width: 290px;
+  @media(max-width: $sm) {
+    padding: 10px;
+    font-size: 12px;
+    width: 170px;
+  }
+  @media(min-width: $sm) and (max-width: $md) {
+    font-size: 16px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../variables/variables.scss";
+.color-selection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 45%;
+  margin-top: 20px;
+  @media(max-width: $xs) {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+
+.color-item {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 30%;
+  padding: 10px 3px 10px 40px; //padding: 4% 1% 4% 16%;
+}
+
+.color-item__radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.color-item__cross {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #c5c5c5;
+  transition: 0.5s;
+}
+
+.color-item__radio:checked~.color-item__cross {
+  background-image: url(../img/cross1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #333333;
+  border: none;
+}
+
+.color-item__radio:checked~.color-item__cross:after {
+  display: block;
+}
+
+.color-item_checked {
+  background-color: #333333;
+  color: #ffffff;
+  transition: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.color-selection:focus-within{
+  border: .1px dotted #777777;
+}

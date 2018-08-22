@@ -1,0 +1,16 @@
+@import "../../variables/variables.scss";
+.search {
+  height: 30px;
+  margin: 10px;
+  border: 1px solid $secondary-color;
+  transition: .3s;
+  @media(max-width: $xs) {
+    //width: 100%;
+  }
+  @media (min-width: $sm) and (max-width: $md) {
+    margin: 10px 0;
+  }
+  &:focus-within {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,20 @@
+.tab-list__content {
+  display: none;
+  padding: 6px 12px;
+  &_active {
+    display: block;
+    animation: rise-up .7s linear;
+  }
+  @keyframes rise-up {
+    0% {
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100% {
+      max-height: 250px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

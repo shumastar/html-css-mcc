@@ -1,0 +1,30 @@
+@import "../../variables/variables.scss";
+.nav-sublist {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0.2s;
+    position: absolute;
+    background-color: $white;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    text-transform: none;
+    cursor: default;
+    z-index: 5;
+}
+
+.nav-list__item_link:hover+.nav-sublist {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-list__item_link:focus+.nav-sublist {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-sublist:hover,
+.nav-sublist:focus {
+    opacity: 1;
+    visibility: visible;
+}

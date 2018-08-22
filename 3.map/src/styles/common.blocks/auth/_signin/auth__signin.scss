@@ -1,0 +1,25 @@
+@import "../../../variables/variables.scss";
+.auth__signin {
+  padding: 10px;
+  overflow: hidden;
+  @media(max-width: $xs) {
+    margin-left: 10px
+  }
+  &_link {
+    color: $secondary-color;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  &_link:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+  &_link:active,
+  &_link:visited {
+    text-decoration: none;
+  }
+  &_link:focus {
+    color: $brand-color;
+  }
+}

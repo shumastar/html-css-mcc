@@ -1,0 +1,11 @@
+@import "../../variables/variables.scss";
+.social-links-list {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    @media(max-width: $xs) {
+        line-height: 100px;
+        padding: 0;
+    }
+}

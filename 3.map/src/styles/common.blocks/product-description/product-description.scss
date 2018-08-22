@@ -1,0 +1,7 @@
+@import "../../variables/variables.scss";
+.product-description {
+  width: 50%;
+  @media(max-width: $xs) {
+    width: 100%;
+  }
+}

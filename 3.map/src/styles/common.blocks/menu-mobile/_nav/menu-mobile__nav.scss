@@ -1,0 +1,15 @@
+.menu-mobile__nav {
+  display: block;
+  position: absolute;
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #333333;
+  height: 300vw;
+  top: 55px;
+  left: -100%;
+  transition: .3s;
+  z-index: 5;
+}

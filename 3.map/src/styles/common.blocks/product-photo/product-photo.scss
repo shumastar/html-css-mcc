@@ -1,0 +1,17 @@
+@import "../../variables/variables.scss";
+.product-photo {
+  width: 48%;
+  height: 710px;
+  @media(max-width: $xs) {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.product-photo__slide {
+  display: block;
+  width: inherit;
+  max-width: 100%;
+  height: auto;
+}
